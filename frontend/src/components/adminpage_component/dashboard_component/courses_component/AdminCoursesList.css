@@ -1,0 +1,150 @@
+div.admin-courses-list-visible{
+    margin-left:5vw;
+    margin-top:10vh;
+    width: 31.42vw;
+    height: 88.3vh;
+    background-color: rgb(255,255,255);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation:adminCoursesPopUp 0.3s ease-in-out 1;
+}
+@keyframes adminCoursesPopUp {
+    from{
+        margin-top: 15vh;
+        opacity: 0;
+    }
+    to{
+        margin-top: 10vh;
+        opacity: 1;
+    }
+}
+div.admin-courses-list-invisible{
+    margin-left:5vw;
+    margin-top:15vh;
+    width: 31.42vw;
+    height: 84.3vh;
+    background-color: rgb(255,255,255);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden;
+    animation:adminCoursesInvisible 0.3s ease-in-out 1;
+}
+@keyframes adminCoursesInvisible {
+    from{
+        margin-top: 10vh;
+        opacity: 1;
+        display: flex;
+        visibility: visible;
+    }
+    to{
+        margin-top: 15vh;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+button.admin-course-list-add-btn{
+     width: 7.5vw;
+     height: 5.08vh;
+     margin-top: 2vh;
+     margin-left: 20vw;
+     background-color: #359ADE;
+     border:none;
+     border-radius: 8px;
+     color: #FFF;
+     cursor: pointer;
+}
+div.admin-courses{
+    width:30vw;
+    height: 73vh;
+    max-height: 73vh;
+    margin-top: 5vh;
+    /* background-color: azure; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+/* Scrollbar.css */
+
+/* Track */
+div.admin-courses::-webkit-scrollbar {
+    width: 5px; /* Width of the entire scrollbar */
+    height: 15px;
+    background-color: #f5f1f1;
+  }
+  
+  /* Handle */
+div.admin-courses::-webkit-scrollbar-thumb {
+        /* Color of the scrollbar handle */
+    border-radius: 4px; /* Roundness of the scrollbar handle */
+  }
+  
+  /* Handle on hover */
+  div.admin-courses::-webkit-scrollbar-thumb:hover {
+    background-color: #359ADE; /* Color of the scrollbar handle on hover */
+  }
+  
+div.admin-course{
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+    height: 25vh;
+    min-height: 25vh;
+    width: 25vw;
+    background-color: #F2F6F8;
+    border-radius: 8px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+div.admin-course:hover{
+    border: #359ADE 1px solid;
+    cursor: pointer;
+}
+div.admin-course-detail-section{
+    height: 14vh;
+    margin-top: 3vh;
+    display: flex;
+}
+img.admin-course-img{
+    height: 15.75vh;
+    width: 8.5vw;
+    margin-left: 1vw;
+    border-radius: 50%;
+}
+div.admin-course-details{
+    margin-top: 0vh;
+    margin-left:1vw;
+    width: 13vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* background-color: #359ADE; */
+}
+p.admin-course-name{
+    font-size: 1.25vw;
+    font-weight: 600;
+    color: #05375B;
+}
+p.admin-course-title{
+    margin-top: -1.5vh;
+    font-size: 1.0vw;
+    font-weight: 500;
+    color: #05375B;
+}
+div.admin-course-btn-section{
+    margin-top: 2vh;
+    margin-left: 17vw;
+    /* background-color: #05375B; */
+}
+.admin-courses-dash-delete-btn{
+    margin-left: 1vw;
+    color: #359ADE;
+    cursor: pointer;
+}

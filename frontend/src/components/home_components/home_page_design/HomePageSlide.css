@@ -1,0 +1,68 @@
+div.home-page-slide{
+    position: absolute;
+    top:22.82vh;
+    width: 100vw;
+    height: 70.38vh;
+    /* background-color: aquamarine; */
+    display: flex;
+}
+div.welcome-part{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* background-color: aliceblue; */
+}
+p.welcome-text-1{
+    position: relative;
+    margin-left: 5.96vw;
+    color: #05375B;
+    font-size: 3.53vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 9vh;
+}
+p.welcome-text-2{
+    position: relative;
+    margin-top: -5vh;
+    margin-left: 5.96vw;
+    color: #95A0A8;
+    font-size: 1.10vw;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+}
+.get-started-btn{
+    width: 12.21vw;
+    height: 5.89vh;
+    margin-left: 5.96vw;
+    margin-top: 4vh;
+    background: #359ADE; 
+    color: #EFF3F5;
+    font-weight: 400;
+    border-radius: 30px;
+    border: none;  
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
+div.image-part{
+    width: 32.8vw;
+    height: 70.3vh;
+    margin-left: 22vw;
+    background-color: #359ADE;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: flex-start;
+}
+
+img.home-img{
+  width: 29.0vw;
+  height: 62.4vh;
+  margin-top: 1.5vh;
+}

@@ -1,0 +1,188 @@
+.contact_body{
+    margin-top: 19px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: 37px;
+  
+    
+}
+.get_in_touch{
+    width: 538px;
+    
+}
+.text h1{
+    margin-top: 10px;
+    margin-left: 102px;
+    color: #05375B;
+    font-size: 40px;
+    font-weight: 700;
+
+}
+.text p{
+    margin-top: 10px;
+    color: 15px;
+    font-weight: 400;
+    margin-left: 76px;
+} 
+.text hr{
+    width: 508px;
+    height: 2px;
+    background-color: #16405D;
+    margin-top: 29px;
+    margin-left: 34px;
+}
+.connect{
+    margin-top: 43px;
+    margin-left: 34px;
+}
+.connect_option h2{
+    color: #000000;
+    font-size: 20px;
+    font-weight: 700;
+
+}
+.option{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+   
+}
+.option img{
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    margin-top: 31px;
+}
+.option p{
+    font-size: 15px;
+    font-weight: 400;
+    color:#000000 ;
+    margin-left:96px;
+    margin-top: 34px;
+
+    
+}
+.pro_link{
+    display: flex;
+    flex-direction: row;
+   
+}
+
+.link{
+    width: 46px;
+    height: 46px;
+    background-color: #359ADE;
+    margin-left: 34px;
+    margin-top: 12px;
+    border-radius: 5px;
+}
+.link img{
+    padding: 6px;
+}
+
+.link:hover{
+    background-color: #16405D;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.form{
+    width: 849px;
+    height: 641px;
+    background-color: #F2F6F8;
+    border-radius: 14px;
+    margin-right: 67px;
+    margin-top: 55px;
+
+}
+.form h1{
+    font-size: 40px;
+    font-weight: 600;
+    color: #05375B;
+    margin-left:63px ;
+    margin-top: 10px;
+
+}
+.form p{
+    font-size: 15px;
+    color: #000000;
+    font-weight: 400;
+    margin-top: 9px;
+    margin-left:63px
+}
+.form-row{
+    display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+.form-row input{
+    width: 316px;
+    height: 32px;
+    font-weight:400 ;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    background: #fff;
+    color:#000000 ;
+    outline: none;
+    margin-top: 32px;
+    margin-left:63px ;
+    padding:12px 39px ;
+    margin-right: 55px;
+
+}
+.form-colum input{
+    width: 652px;
+    height: 32px;
+    font-size:15px ;
+    font-weight:400 ;
+    border-radius: 5px;
+    border: none;
+    background: #fff;
+    color:#000000 ;
+    outline: none; 
+    margin-left: 63px;
+    margin-right: 42px;
+    margin-top: 32px;
+    padding:12px 39px ;
+}
+.form-colum textarea{
+    width: 687px;
+    height: 124px;
+    font-size:15px ;
+    font-weight:400 ;
+    border-radius: 5px;
+    border: none;
+    background: #fff;
+    color:#000000 ;
+    outline: none; 
+    margin-top: 32px;
+    margin-right: 42px;
+    margin-left: 63px;
+    padding-top: 12px;
+    padding-left: 39px;
+}
+.form-colum  button{
+     width: 147px;
+     height: 42px;
+     background: #C0DCEF;
+     border-radius: 30px;
+     margin-top: 32px;
+     margin-left: 63px;
+     border: none;
+     color: #05375B;
+     font-size: 15px;
+     font-weight: 600;
+     margin-bottom: 77px;
+     cursor: pointer;
+}
+
+.form-colum  button:hover{
+    background-color: #16405D;
+    cursor: pointer;
+    transition: 0.3s;
+    color:#fff ;
+}
+
+

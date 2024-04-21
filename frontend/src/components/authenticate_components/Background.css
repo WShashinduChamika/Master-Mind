@@ -1,0 +1,89 @@
+div.signup-login-background{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: antiquewhite; */
+    display: flex;
+}
+div.left-part{
+    width: 60.33vw;
+    height: 100vh;
+    flex-shrink: 0;
+    background: rgba(192, 220, 239, 0.53);
+    display: flex;
+    align-items: center;
+}
+div.signup-login-welcome-part{
+    margin-left: 5vw;
+    width: 56.43vw;
+    height: 93.17vh;
+    flex-shrink: 0;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+p.signup-login-welcome-text{
+    margin-left: 8vw;
+    color: #05375B;
+    /* font-family: Lato; */
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+img.signup-login-logo{
+    margin-top: 3vh;
+    margin-left: 3vw;
+    width: 13.40vw;
+    height: 7.02vh;
+}
+img.signup-login-welcome-img{
+    margin-left: 8vw;
+    width: 34.21vw;
+    height: 50.07vh;
+}
+div.right-part{
+    width: 39.67vw;
+    height: 100vh;
+    background-color:#64ADDE;
+    display: flex;
+    align-items: center;
+}
+div.form-content{
+    width: 35.61vw;
+    height: 93.17vh;
+    flex-shrink: 0;
+    background-color: #95C9EC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+div.signup-login-nav-bar{
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+}
+.signup-login-nav-link{
+    margin-right: 2vw;
+    color: #05375B;
+    /* font-family: Inter; */
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+.back-sign-up-button{
+    margin-left: 2vw;
+    width:10vw;
+    height:5vh;
+    padding: 1vh 2vw;
+    flex-shrink: 0;
+    border-radius: 2.2vw;
+    background: #359ADE;
+    color: #EFF3F5;
+    /* font-family: Montserrat; */
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}

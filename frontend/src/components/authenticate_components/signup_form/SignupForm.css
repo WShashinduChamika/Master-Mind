@@ -1,0 +1,108 @@
+div.signup-page{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(100, 173, 222, 0.56);
+}
+div.signup-form{
+    height: 77.98vh;
+    width: 20.75vw;
+    background-color: rgba(255, 255, 255, 0.99);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+p.signup-title{
+    color: #0B5181;
+    /* font-family: Lato; */
+    margin-bottom: 8vh;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+input.signup-input{
+    width: 15.55vw;
+    height: 4.68vh;
+    margin-bottom: 2vh;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: rgba(242, 246, 248, 0.96);
+    color: #0B5181;
+    /* font-family: Lato; */
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-left: 1vw;
+}
+input.password{
+    width: 13.55vw;
+}
+button.eye-btn{
+    height: 4.68vh;
+    border: none;
+    background-color:rgba(242, 246, 248, 0.96);
+    cursor: pointer;
+}
+button.form-btn{
+    width: 16.55vw;
+    height: 5.12vh;
+    margin-top: 2vh;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: rgba(53, 154, 222, 0.77);
+    border: none;
+    color: #EFF3F5;
+    /* font-family: Lato; */
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    cursor: pointer;
+}
+button.disable{
+    background: rgba(242, 246, 248, 0.77);
+    color: #0B5181;
+}
+p.or-text{
+    color: #0B5181;
+    /* font-family: Lato; */
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+input.term-check{
+    width: 0.73vw;
+    height: 1.56vh;
+    margin-top: 2vh;
+    margin-left:0vw;
+    flex-shrink: 0;
+    border: 1px solid #0B5181;
+    background: #FFFBFB;
+    /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); */
+}
+p.term-text{
+    margin-left: 1.5vw;
+    color: #0B5181;
+/* font-family: Lato; */
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+div.error{
+    height: 4vh;
+    width: 15.8vw;
+    padding-left: 1vw;
+    background-color: #F0CDC0;
+    color: #973109;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
