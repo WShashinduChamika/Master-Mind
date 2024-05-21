@@ -1,86 +1,91 @@
 div.admin-page{
     display: flex;
-}
-div.admin-side-nav-bar{
-    height: 100vh;
-    width: 18.24vw;
-    background-color: rgb(5, 55, 91, 0.95);
-    display: flex;
-    flex-direction: column;
-}
-img.admin-side-nav-bar-logo{
-    margin-left: 0vw;
-    width:18.24vw;
-    height: 4.68vh;
-    width: 7.72vw;
-    margin-top: 2vh;
-    margin-left: 1vw;
-}
-div.admin-side-nav-bar-user-profile{
-    margin-top:2vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
-div.admin-profile-pic{
-    height: 9.5vh;
-    width: 4.41vw;
-    color: #359ADE;
-    font-size: 2.5vw;
-    font-weight: 600;
-    background-color: #EFF3F5;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-p.admin-user-name{
-    margin-top: -0.5;
-    font-size: 1.1vw;
-    font-weight: 600;
-    color: white;
-}
-p.admin-email{
-    margin-top: -2vh;
-    font-size: 0.9vw;
-    font-weight: 400;
-    color: white;
-}
-div.admin-navigations{
-    height:6.9vh;
-    width: 14.27vw;
-    margin-top: 5vh;
-    margin-left:2vw;
-    /* background-color: #359ADE; */
-    border-bottom: 1px solid rgb(255, 255, 255,0.5);
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-div.admin-navigations-active{
-    background-color: rgb(242, 246, 248,0.25);
-    border:none;
-    border-radius: 8px;
-}
-div.admin-navigations:hover{
-    background-color: rgb(242, 246, 248,0.25);
-    border:none;
-    border-radius: 8px;
-}
-.admin-nav-icon{
-    margin-left: 1vw;
-    color: rgb(255, 255, 255,0.6);
-}
-div.admin-navigations:hover .admin-nav-icon{
-    color: rgb(255, 255, 255,0.8);
-}
-p.admin-nav-link{
-    margin-left: 1vw;
-    font-size: 1.1vw;
-    font-weight: 400;
-    color: rgb(255, 255, 255,0.7);  
-}
-div.admin-navigations:hover .admin-nav-link{
-    color: rgb(255, 255, 255,0.8);
-}
+    background-color: rgba(241, 244, 245, 0.979);
+ }
+ div.admin-page-side-nav-bar{
+     min-width: 18.24vw;
+ }
+ div.admin-page-content-side{
+     min-width: 75vw;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ div.admin-side-nav-bar{
+     position: fixed;
+     height: 100vh;
+     width: 18.24vw;
+     /* min-width: 18.34vw; */
+     background-color: rgba(5, 55, 91, 0.89);
+     display: flex;
+     flex-direction: column;
+ }
+ img.admin-side-nav-bar-logo{
+     padding: 1.8rem 2rem;
+     margin-bottom: 5rem;
+     width:18rem;
+ }
+ div.admin-side-nav-bar-user-profile{
+     margin-top:2vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: center;
+ }
+ /* div.admin-profile-pic{
+     height: 9.5vh;
+     width: 4.41vw;
+     color: #359ADE;
+     font-size: 2.5vw;
+     font-weight: 600;
+     background-color: #EFF3F5;
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ p.admin-user-name{
+     margin-top: -0.5;
+     font-size: 1.1vw;
+     font-weight: 600;
+     color: white;
+ }
+ p.admin-email{
+     margin-top: -2vh;
+     font-size: 0.9vw;
+     font-weight: 400;
+     color: white;
+ } */
+ div.admin-navigations{
+     margin: 0.5rem 0rem;
+     margin-bottom: 1rem;
+     width: 100%;
+     display: flex;
+     align-items: center;
+     cursor: pointer;
+ }
+ div.admin-navigations-active{
+     background-color: rgba(5, 55, 91, 0.94);
+     border:none;
+ }
+ div.admin-navigations:hover{
+     background-color: rgba(5, 55, 91, 0.94);
+ }
+ .admin-nav-icon{
+     padding: 1.4rem 0.3rem;
+     padding-left: 7rem;
+     color: rgb(255, 255, 255,0.6);
+ }
+ div.admin-navigations:hover .admin-nav-icon{
+     color: rgb(255, 255, 255,0.8);
+ }
+ p.admin-nav-link{
+     margin:0;
+     padding: 1.4rem 0.2rem;
+     font-size: 1.5rem;
+     font-weight: 600;
+     color: rgb(255, 255, 255,0.7);  
+ }
+ div.admin-navigations:hover .admin-nav-link{
+     color: rgb(255, 255, 255,0.8);
+ }
