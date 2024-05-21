@@ -39,28 +39,28 @@ export default function AdminCoursesList(props) {
 
     getCourses()
     if (props.isDashboardClicked) {
-      document.getElementById("admin-courses-list-").classList.remove("admin-courses-list-invisible")
-      document.getElementById("admin-courses-list-").classList.add("admin-courses-list-visible")
+      document.getElementById("admin-dashboard-courses-list-").classList.remove("admin-dashboard-courses-list-invisible")
+      document.getElementById("admin-dashboard-courses-list-").classList.add("admin-dashboard-courses-list-visible")
     }
     else {
-      document.getElementById("admin-courses-list-").classList.remove("admin-courses-list-visible")
-      document.getElementById("admin-courses-list-").classList.add("admin-courses-list-invisible")
+      document.getElementById("admin-dashboard-courses-list-").classList.remove("admin-dashboard-courses-list-visible")
+      document.getElementById("admin-dashboard-courses-list-").classList.add("admin-dashboard-courses-list-invisible")
     }
     
   }, [props.isDashboardClicked, props.isAdded, props.isDeleted, props.isUpdated])
   
   return (
-    <div className='admin-courses-list-invisible' id='admin-courses-list-'>
-      <button className='admin-course-list-add-btn' onClick={handleAddCourse}>+ Course</button>
-      <div className='admin-courses'>
+    <div className='admin-dashboard-courses-list-invisible' id='admin-dashboard-courses-list-'>
+      <button className='admin-dashboard-course-list-add-btn' onClick={handleAddCourse}>+ Course</button>
+      <div className='admin-dashboard-courses'>
         {
           courseList.map((course, index) => (
-            <div className='admin-course' key={index}>
+            <div className='admin-dashboard-course' key={index}>
               <div className='admin-course-detail-section'>
-                <img src={courseImg} className='admin-course-img'></img>
-                <div className='admin-course-details'>
-                  <p className='admin-course-name'>{course.name}</p>
-                  <p className='admin-course-title'>{course.title}</p>
+                <img src={courseImg} className='admin-dashboard-course-img'></img>
+                <div className='admin-dashboard-course-details'>
+                  <p className='admin-dashboard-course-name'>{course.name}</p>
+                  <p className='admin-dashboard-course-title'>{course.title}</p>
                 </div>
               </div>
               <div className='admin-course-btn-section'>
