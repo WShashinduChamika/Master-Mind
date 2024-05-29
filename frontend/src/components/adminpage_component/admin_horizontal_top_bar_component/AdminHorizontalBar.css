@@ -1,0 +1,27 @@
+div.admin-horizontal-top-bar{
+    padding: 1rem 0rem;
+    position: fixed;
+    top:0;
+    left:18.5vw;
+    width: 81vw;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.admin-top-bar-menu{
+   margin-left: 5rem;
+}
+div.admin-top-bar-user-profile{
+    margin-right: 4rem;
+    padding: 0.7rem 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    border-radius: 50%;
+    background-color: rgba(53, 154, 222, 0.78);
+    cursor:pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
