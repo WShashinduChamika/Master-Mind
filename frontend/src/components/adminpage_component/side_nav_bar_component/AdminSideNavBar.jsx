@@ -17,6 +17,9 @@ export default function AdminSideNavBar(props) {
     if (props.isCoursesClicked) {
       props.setIsCoursesClicked(!props.isCoursesClicked)
     }
+    if(props.isCourseAddedClicked){
+      props.setIsCourseAddedClicked(!props.isCourseAddedClicked)
+    }
 
     props.setIsDashboardClicked(!props.isDahsboardClicked)
 
@@ -29,6 +32,10 @@ export default function AdminSideNavBar(props) {
     
     if (props.isDahsboardClicked) {
       props.setIsDashboardClicked(!props.isDahsboardClicked)
+    }
+
+    if(props.isCourseAddedClicked){
+      props.setIsCourseAddedClicked(!props.isCourseAddedClicked)
     }
 
     props.setIsCoursesClicked(!props.isCoursesClicked)
