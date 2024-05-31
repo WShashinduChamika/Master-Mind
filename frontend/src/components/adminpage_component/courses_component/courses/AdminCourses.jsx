@@ -25,7 +25,8 @@ export default function AdminCourses(props) {
     }
 
     const handleAddNewCourseBtn = () => {
-        
+        props.setIsCourseAddedClicked(!props.isCourseAddedClicked)
+        props.setIsCoursesClicked(!props.isCoursesClicked)
     }
 
     const handleEditBtn = (id) => {
