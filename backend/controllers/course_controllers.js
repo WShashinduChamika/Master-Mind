@@ -4,11 +4,11 @@ const mongoose = require('mongoose')
 
 //create a course
 const createCourse = async(req,res)=>{
-   const {title,name,sections} = req.body
+   const {title,name,overview} = req.body
 
    try{
 
-    const course = await Course.create({title,name,sections})
+    const course = await Course.create({title,name,overview})
     res.status(200).json(course)
 
    }catch(error){

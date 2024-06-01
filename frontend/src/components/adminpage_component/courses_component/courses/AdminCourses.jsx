@@ -30,6 +30,11 @@ export default function AdminCourses(props) {
     }
 
     const handleEditBtn = (id) => {
+        props.setCourseID(id)
+        props.setIsCoursesClicked(!props.isCoursesClicked)
+        setTimeout(() => {
+            props.setIsCourseEditClicked(!props.isCourseEditClicked)
+        }, 100);
 
     }
 

@@ -10,7 +10,7 @@ export default function AdminPage() {
 
   const [isCoursesClicked, setIsCoursesClicked] = useState(false)
   const [isCourseAddedClicked, setIsCourseAddedClicked] = useState(false);
-
+  const [isCourseEditClicked, setIsCourseEditClicked] = useState(false)
 
   const [courseID, setCourseID] = useState('')
 
@@ -32,6 +32,8 @@ export default function AdminPage() {
           setIsCoursesClicked={setIsCoursesClicked}
           isCourseAddedClicked={isCourseAddedClicked}
           setIsCourseAddedClicked={setIsCourseAddedClicked}
+          isCourseEditClicked={isCourseEditClicked}
+          setIsCourseEditClicked={setIsCourseEditClicked}
         >
         </AdminSideNavBar>
       </div>
@@ -49,6 +51,8 @@ export default function AdminPage() {
           setIsCoursesClicked={setIsCoursesClicked}
           isCourseAddedClicked={isCourseAddedClicked}
           setIsCourseAddedClicked={setIsCourseAddedClicked}
+          isCourseEditClicked={isCourseEditClicked}
+          setIsCourseEditClicked={setIsCourseEditClicked}
         ></AdminCourseList>
       </div>
 
