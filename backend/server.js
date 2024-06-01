@@ -8,6 +8,9 @@ const mongoose = require('mongoose')
 //get course routes
 const courseRoutes = require('./routes/course')
 
+//get course section routes
+const courseSectionRoutes = require('./routes/course_section')
+
 //get user routes
 const userRoutes = require('./routes/user')
 
@@ -28,6 +31,8 @@ app.use((req,res,next)=>{
 // })
 
 app.use('/api/courses',courseRoutes)
+
+app.use('/api/course_section',courseSectionRoutes)
 
 app.use('/api/user',userRoutes)
 

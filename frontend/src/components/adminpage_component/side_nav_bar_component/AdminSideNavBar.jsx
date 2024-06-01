@@ -20,6 +20,10 @@ export default function AdminSideNavBar(props) {
     if(props.isCourseAddedClicked){
       props.setIsCourseAddedClicked(!props.isCourseAddedClicked)
     }
+    if(props.isCourseEditClicked){
+      props.setIsCourseEditClicked(!props.isCourseEditClicked)
+    }
+
 
     props.setIsDashboardClicked(!props.isDahsboardClicked)
 
