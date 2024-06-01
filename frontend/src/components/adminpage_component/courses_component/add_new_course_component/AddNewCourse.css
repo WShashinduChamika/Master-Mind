@@ -1,0 +1,209 @@
+div.admin-courses-add-new-course{
+    margin: 10rem 0rem;
+    margin-left: 5rem;
+    width: 75vw;
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: column;
+    animation:adminEditCoursesPopUp 0.3s ease-in-out 1;
+}
+@keyframes adminEditCoursesPopUp {
+    from{
+        margin-top: 25rem;
+        opacity: 0;
+    }
+    to{
+        margin-top: 10rem;
+        opacity: 1;
+    }
+}
+div.admin-courses-add-new-course-invisible{
+    display: none;
+}
+div.add-selected-course{
+    margin-top: 3vh;
+    width: 75vw;
+    gap:10rem;
+    /* background-color: rgb(15, 124, 219); */
+    display: flex;
+}
+div.add-course-detail-section{
+    /* margin-left: 3vw; */
+    display: flex;
+    flex-direction: column;
+}
+div.add-course-details{
+    gap:2rem;
+    padding: 2rem 1rem;
+    width: 25vw;
+    background-color: #FFF;
+    border-radius: 0.4rem;
+    display: flex;
+    flex-direction: column;
+}
+img.add-course-img{
+    height: 36vh;
+    width: 25vw;
+}
+input.admin-courses-add-new-course-details{
+    padding: 1rem 1.2rem;
+    width: 15.92vw;
+    font-size: 1.5rem;
+    font-weight: 550;
+    color: #05375B;
+    border-radius: 5px;
+    border: 0.1rem solid #359ADE;
+    cursor: pointer;
+}
+input.admin-courses-add-new-course-details:focus{
+    outline: 2px solid #359ADE;
+}
+input.admin-courses-add-new-course-details::placeholder{
+    font-size: 1.35vw;
+    font-weight: 450;
+    color: #05375B;
+}
+p.edit-course-name{
+    margin-top: 1vh;
+    font-size: 1.35vw;
+    font-weight: 600;
+    color: #05375B;
+}
+p.edit-course-title{
+    margin-top: -3vh;
+    font-size: 1.0vw;
+    font-weight: 500;
+    color: #05375B;
+}
+
+div.add-course-overview{
+    margin-top: 5rem;
+    width: 35vw;
+    gap:2rem;
+    display: flex;
+    flex-direction: column;
+}
+p.add-course-overview-title{
+    margin-bottom: 2vh;
+    font-size: 1.35vw;
+    font-weight: 600;
+    color: #05375B;
+}
+p.add-course-overview-description{
+    margin-top: -2vh;
+    font-size: 0.9vw;
+    font-weight: 600;
+    color: #05375B;
+    text-align: justify;
+}
+textarea.add-course-overview-description{
+    margin-top: 0vh;
+    padding: 2rem 2.5rem;
+    height: 45vh;
+    font-size: 0.9vw;
+    font-weight: 600;
+    color: #05375B;
+    text-align: justify;
+    border: none;
+}
+textarea.add-course-overview-description:focus{
+    outline:#359ADE 2px solid;
+}
+textarea.add-course-overview-description::placeholder{
+    font-size: 0.9vw;
+    font-weight: 600;
+    color: #05375B;
+}
+div.add-course-sections-part{
+    width: 25vw;
+    max-height: 70vh;
+    padding: 1.5rem 2rem;
+    background-color: #FFF;
+}
+div.add-course-section-list{
+    padding: 2rem 0rem;
+    gap:3rem;
+    display: flex;
+    flex-direction: column;
+    max-height: 45vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+div.add-course-section-list::-webkit-scrollbar {
+    width: 5px; /* Width of the entire scrollbar */
+    height: 15px;
+    background-color: #f5f1f1;
+  }
+  
+  /* Handle */
+div.add-course-section-list::-webkit-scrollbar-thumb {
+        /* Color of the scrollbar handle */
+    border-radius: 4px; /* Roundness of the scrollbar handle */
+    background-color: #359ADE;
+  }
+
+p.add-course-sections-title{
+    margin-top: 2vh;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #05375B;
+}
+div.add-course-section{
+    padding: 0rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div.add-course-section input{
+    padding-left: 1rem;
+}
+input.add-course-section-input{
+    width: 20vw;
+    padding: 1.4rem 1rem;
+    font-size: 1.0vw;
+    font-weight: 500;
+    color: #16405D;
+    background-color: #F2F6F8;
+    border-radius: 5px;
+    border:none;
+}
+input.add-course-section-input:focus{
+    outline: 2px solid #359ADE;
+}
+input.add-course-section-input::placeholder{
+    font-size: 1.0vw;
+    font-weight: 500;
+    color: #16405D;
+}
+div.add-course-field-handle-btn-container{
+    padding: 2.5rem 1rem;
+    gap:2rem;
+    display: flex;
+}
+button.add-course-field-handle-btn{
+    padding: 1rem 1.2rem;
+    width: 5vw;
+    background-color: #359ADE;
+    color: #D9D9D9;
+    font-size: 0.8vw;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button.course-add-save-change-btn{
+    position: absolute;
+    bottom: -35rem;
+    right:9rem;
+    padding: 1rem 2.5rem;
+    background-color: #359ADE;
+    color: #D9D9D9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transform: scale(0.9);
+    transition: 0.1s ease-in-out;
+}
+button.course-add-save-change-btn:hover{
+    transform: scale(1.2);
+    color: white;
+}
