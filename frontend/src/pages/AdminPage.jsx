@@ -11,6 +11,7 @@ export default function AdminPage() {
   const [isCoursesClicked, setIsCoursesClicked] = useState(false)
   const [isCourseAddedClicked, setIsCourseAddedClicked] = useState(false);
   const [isCourseEditClicked, setIsCourseEditClicked] = useState(false)
+  const [isDisplayCourseDeleteForm,setIsDisplayCourseDeleteForm] = useState(false)
 
   const [courseID, setCourseID] = useState('')
 
@@ -53,6 +54,8 @@ export default function AdminPage() {
           setIsCourseAddedClicked={setIsCourseAddedClicked}
           isCourseEditClicked={isCourseEditClicked}
           setIsCourseEditClicked={setIsCourseEditClicked}
+          isDisplayCourseDeleteForm={isDisplayCourseDeleteForm}
+          setIsDisplayCourseDeleteForm={setIsDisplayCourseDeleteForm}
         ></AdminCourseList>
       </div>
 
