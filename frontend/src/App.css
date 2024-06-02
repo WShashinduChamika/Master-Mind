@@ -4,17 +4,26 @@
   padding: 0%;
 }
 
-div.admin-path{
+.close-icon {
+  position: absolute;
+  top: -4rem;
+  right: -1rem;
+  cursor: pointer;
+}
+
+div.admin-path {
   margin: 1rem 0rem;
   font-size: 1.2rem;
   font-weight: 500;
   color: #061017d0;
 }
-div.admin-path span:hover{
+
+div.admin-path span:hover {
   color: #359ADE;
-  cursor:pointer;
+  cursor: pointer;
 }
-div.admin-navigation-title{
+
+div.admin-navigation-title {
   font-size: 1.8rem;
   font-weight: 500;
   color: #061017;

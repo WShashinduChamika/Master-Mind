@@ -39,7 +39,8 @@ export default function AdminCourses(props) {
     }
 
     const handleDeleteBtn = (id)=>{
-       
+        props.setCourseID(id)
+        props.setIsDisplayCourseDeleteForm(!props.isDisplayCourseDeleteForm)
     }
 
     useEffect(() => {
@@ -52,7 +53,7 @@ export default function AdminCourses(props) {
             adminCourses.classList.remove('admin-courses')
             adminCourses.classList.add('admin-courses-invisible')
         }
-    }, [props.isCoursesClicked])
+    }, [props.isCoursesClicked,props.isDeleted])
 
     return (
         <div className='admin-courses-invisible' id='admin-courses'>
