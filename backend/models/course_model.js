@@ -2,12 +2,6 @@ const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
 
-const sectionSchema = new Schema({
-    title:{
-        type:String,
-        //required: true
-    }
-})
 const courseSchema = new Schema({
     title:{
         type:String,
@@ -17,7 +11,10 @@ const courseSchema = new Schema({
         type:String,
         require:true
     },
-    sections:[sectionSchema],
+    overview:{
+        type:String,
+        require:true
+    }
     
 },{timestamps:true})
 
