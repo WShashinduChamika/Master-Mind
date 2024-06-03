@@ -3,10 +3,14 @@ import AdminCourses from './courses/AdminCourses'
 import './AdminCourseList.css'
 import AddNewCourse from './add_new_course_component/AddNewCourse'
 import EditCourse from './edit_course_component/EditCourse'
+import CourseDelete from './amin_course_delete_form_component/CourseDelete'
 
 
 export default function AdminCourseList(props) {
+
     const [courseID, setCourseID] = useState()
+    const [isDeleted,setIsDeleted] = useState(false)
+
     return (
 
         <div className='admin-courses-list'>
@@ -19,6 +23,10 @@ export default function AdminCourseList(props) {
                 setIsCourseAddedClicked={props.setIsCourseAddedClicked}
                 isCourseEditClicked={props.isCourseEditClicked}
                 setIsCourseEditClicked={props.setIsCourseEditClicked}
+                isDisplayCourseDeleteForm={props.isDisplayCourseDeleteForm}
+                setIsDisplayCourseDeleteForm={props.setIsDisplayCourseDeleteForm}
+                isDeleted={isDeleted}
+                setIsDeleted={setIsDeleted}
             ></AdminCourses>
 
             {props.isCourseAddedClicked ?
@@ -31,7 +39,7 @@ export default function AdminCourseList(props) {
                 ></AddNewCourse>
                 : <></>
             }
-            
+
             {props.isCourseEditClicked ?
                 <EditCourse
                     isCoursesClicked={props.isCoursesClicked}
@@ -42,6 +50,16 @@ export default function AdminCourseList(props) {
                 ></EditCourse>
                 : <></>
             }
+        
+            <CourseDelete
+                isDisplayCourseDeleteForm={props.isDisplayCourseDeleteForm}
+                setIsDisplayCourseDeleteForm={props.setIsDisplayCourseDeleteForm}
+                isCoursesClicked={props.isCoursesClicked}
+                setIsCoursesClicked={props.setIsCoursesClicked}
+                isDeleted={isDeleted}
+                setIsDeleted={setIsDeleted}
+                courseID={courseID}
+            ></CourseDelete>
 
         </div>
     )
