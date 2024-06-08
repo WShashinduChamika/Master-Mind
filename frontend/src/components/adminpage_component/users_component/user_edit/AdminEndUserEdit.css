@@ -1,0 +1,124 @@
+div.admin-end-user-edit-profile{
+    margin-top: 10rem;
+    width: 68vw;
+    animation: adminUserEditVisible 0.3s ease-in-out 1;
+}
+@keyframes adminUserEditVisible {
+    from{
+       margin-top: 25rem;
+       opacity: 0;
+    }
+    to{
+        margin-top: 10rem;
+        opacity: 1;
+    }
+}
+div.admin-end-user-edit-profile-invisible{
+    display: none;
+}
+div.admin-end-user-edit-profile-pic{
+    padding: 3rem 0rem;
+    
+}
+div.admin-end-user-profile-edit-pic-img{
+    gap:3rem;
+    display: flex;
+}
+div.admin-end-user-profile-edit-pic-img img{
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+}
+div.admin-end-user-edit-profile-edit-btns{
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    max-width: 200px;
+}
+input.admin-end-user-edit-profile-edit-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 80%;
+    height: 100%;
+    cursor: pointer;
+}
+.admin-end-custom-file-upload {
+    display: inline-block;
+    width: 80%;
+    padding: 1rem 1.5rem;
+    background-color: #359ade9a;
+    font-size: 1.4rem;
+    color: white;
+    text-align: center;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.admin-end-custom-file-upload:hover {
+    background-color: #359ade;
+}
+div.admin-end-user-profile-edit-personal-info{
+    padding: 2rem 0rem;
+    display: flex;
+    flex-direction: column;
+}
+div.admin-end-user-profile-edit-personal-info-row{
+    gap:5rem;
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+}
+div.edit-personal-info-row-email{
+    grid-template-columns:repeat(1, 1fr);
+}
+div.admin-end-user-profile-edit-personal-info-row-type{
+    display: flex;
+    flex-direction: column;
+}
+div.admin-end-user-profile-edit-personal-info-row-type p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color:rgba(0, 0, 0, 0.8);
+}
+div.admin-end-user-profile-edit-personal-info-row-type input{
+    padding: 1rem 1rem;
+    font-size: 1.4rem;
+    border: 0.1rem solid #359ADE;
+}
+.admin-end-user-profile-edit-personal-info-row-type-dropdown-control{
+    padding: 1rem 1rem;
+    font-size: 1.4rem;
+    color: #000;
+    border: 0.1rem solid #359ADE;
+}
+.admin-end-user-profile-edit-personal-info-row-type-dropdown-menu{
+    padding: 1rem 0rem;
+    font-size: 1.4rem;
+    color: #000;
+    border: 0.1rem solid #359ADE;
+}
+div.admin-end-user-profile-edit-personal-info-row-type input:focus{
+    padding: 1rem 1rem;
+    outline: 0.2rem solid #359ADE;
+}
+div.admin-end-user-profile-edit-save-changes-btn{
+    padding: 2rem 0rem;
+    display: flex;
+    justify-content: flex-end;
+}
+div.admin-end-user-profile-edit-save-changes-btn button{
+    color: rgb(255, 255, 255,0.7);
+    padding: 0.7rem 1.5rem;
+    background-color: rgba(53, 154, 222, 0.9);
+    border: none;
+    cursor: pointer;
+    transform: scale(0.9);
+    transition: 0.2s ease-in-out;
+}
+div.admin-end-user-profile-edit-save-changes-btn button:hover{
+    color:#FFF;
+    transform: scale(1.1);
+}

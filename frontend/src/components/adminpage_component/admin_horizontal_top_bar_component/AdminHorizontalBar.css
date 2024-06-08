@@ -1,27 +1,55 @@
-div.admin-horizontal-top-bar{
-    padding: 1rem 0rem;
-    position: fixed;
-    top:0;
-    left:18.5vw;
-    width: 81vw;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+div.admin-top-bar {
+   padding: 1rem 0rem;
+   position: fixed;
+   top: 0;
+   left: 18.5vw;
+   width: 81vw;
+   background-color: white;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   border-bottom: 0.3rem solid #F1F4F5;
 }
-.admin-top-bar-menu{
+
+.user-top-bar-home {
    margin-left: 5rem;
+   cursor: pointer;
+   transform: scale(0.9);
+   transition: 0.2s ease-in-out;
 }
-div.admin-top-bar-user-profile{
-    margin-right: 4rem;
-    padding: 0.7rem 1.2rem;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: white;
-    border-radius: 50%;
-    background-color: rgba(53, 154, 222, 0.78);
-    cursor:pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.user-top-bar-home:hover {
+   transform: scale(1.2);
+   color: rgb(53, 154, 222);
+}
+
+div.admin-top-bar-user-profile {
+   margin-left: 78rem;
+   margin-right: 4rem;
+   padding: 0.7rem 1.2rem;
+   font-size: 1.5rem;
+   font-weight: 600;
+   color: white;
+   text-transform: capitalize;
+   border-radius: 50%;
+   background-color: rgba(53, 155, 222, 0.78);
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+div.admin-top-bar img {
+   position: fixed;
+   right: 4rem;
+   height: 3.5rem;
+   width: 3.5rem;
+   border-radius: 50%;
+}
+
+div.admin-dashboard-title {
+   margin-left: 3rem;
+   font-size: 1.6rem;
+   font-weight: 600;
+   color: #000;
 }
