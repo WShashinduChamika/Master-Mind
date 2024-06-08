@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import AdminSideNavBar from '../components/adminpage_component/side_nav_bar_component/AdminSideNavBar'
 import AdminHoirzontalBar from '../components/adminpage_component/admin_horizontal_top_bar_component/AdminHoirzontalBar'
-import DashBoard from '../components/adminpage_component/dashboard_component/DashBoard'
 import AdminCourseList from '../components/adminpage_component/courses_component/AdminCourseList'
+import UsersList from '../components/adminpage_component/users_component/UsersList'
 
 export default function AdminPage() {
-
-  const [isDahsboardClicked, setIsDashboardClicked] = useState(true)
 
   const [isCoursesClicked, setIsCoursesClicked] = useState(false)
   const [isCourseAddedClicked, setIsCourseAddedClicked] = useState(false);
   const [isCourseEditClicked, setIsCourseEditClicked] = useState(false)
-  const [isDisplayCourseDeleteForm,setIsDisplayCourseDeleteForm] = useState(false)
+  const [isDisplayCourseDeleteForm, setIsDisplayCourseDeleteForm] = useState(false)
+
+  const [isUsersClicked, setIsUsersClicked] = useState(true)
+  const [isUserProfileClicked, setIsUserProfileClicked] = useState(false)
+  const [isUserEditClicked, setIsUserEditClicked] = useState(false)
+  const [isUserDeleted, setIsUserDeleted] = useState(false)
 
   const [courseID, setCourseID] = useState('')
 
@@ -26,26 +29,28 @@ export default function AdminPage() {
 
         <AdminSideNavBar
 
-          isDahsboardClicked={isDahsboardClicked}
-          setIsDashboardClicked={setIsDashboardClicked}
-
           isCoursesClicked={isCoursesClicked}
           setIsCoursesClicked={setIsCoursesClicked}
           isCourseAddedClicked={isCourseAddedClicked}
           setIsCourseAddedClicked={setIsCourseAddedClicked}
           isCourseEditClicked={isCourseEditClicked}
           setIsCourseEditClicked={setIsCourseEditClicked}
+
+          isUsersClicked={isUsersClicked}
+          setIsUsersClicked={setIsUsersClicked}
+          isUserProfileClicked={isUserProfileClicked}
+          setIsUserProfileClicked={setIsUserProfileClicked}
+          isUserEditClicked={isUserEditClicked}
+          setIsUserEditClicked={setIsUserEditClicked}
+          isUserDeleted={isUserDeleted}
+          setIsUserDeleted={setIsUserDeleted}
         >
         </AdminSideNavBar>
       </div>
-    
+
       <div className='admin-page-content-side'>
+        
         <AdminHoirzontalBar></AdminHoirzontalBar>
-
-        <DashBoard 
-           isDahsboardClicked={isDahsboardClicked}
-
-        ></DashBoard>
 
         <AdminCourseList
           isCoursesClicked={isCoursesClicked}
@@ -57,6 +62,18 @@ export default function AdminPage() {
           isDisplayCourseDeleteForm={isDisplayCourseDeleteForm}
           setIsDisplayCourseDeleteForm={setIsDisplayCourseDeleteForm}
         ></AdminCourseList>
+
+        <UsersList
+          isUsersClicked={isUsersClicked}
+          setIsUsersClicked={setIsUsersClicked}
+          isUserProfileClicked={isUserProfileClicked}
+          setIsUserProfileClicked={setIsUserProfileClicked}
+          isUserEditClicked={isUserEditClicked}
+          setIsUserEditClicked={setIsUserEditClicked}
+          isUserDeleted={isUserDeleted}
+          setIsUserDeleted={setIsUserDeleted}
+        >
+        </UsersList>
       </div>
 
     </div>
