@@ -1,0 +1,170 @@
+div.admin-users{
+    margin-top: 10rem;
+    /* margin-left: 5rem; */
+    /* background-color: aqua; */
+    width: 68vw;
+    display: flex;
+    flex-direction: column;
+    animation:adminUsersPopUp 0.2s ease-in-out 1;
+}
+@keyframes adminUsersPopUp {
+    from{
+        margin-top: 25rem;
+        opacity: 0;
+    }
+    to{
+        margin-top: 10rem;
+        opacity: 1;
+    }
+}
+div.admin-users-invisible{
+    margin-left: 5rem;
+    display: none;
+}
+div.admin-navigation-title{
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #061017;
+}
+div.admin-path{
+    margin: 1rem 0rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #061017d0;
+}
+div.amin-users-users-list{
+    margin-top: 1rem;
+    margin-bottom: 20rem;
+    padding: 4rem;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+div.admin-users-title-and-search-bar{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+div.admin-users-title{
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #000;
+
+}
+div.admin-users-search-bar{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.1rem solid rgba(53, 154, 222, 0.55);
+}
+input.admin-search-input{
+    margin-left: 3rem;
+    outline: none;
+    border:none;
+}
+div.admin-user-list-table{
+    width: 100%;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+div.admin-user-list-table-titles{
+    display: flex;
+    align-items: center;
+}
+div.user-list-table-title{
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #000000da;
+}
+div.profile{
+    margin-left: 3rem;
+}
+div.email{
+    margin-left: 10rem;
+}
+div.name{
+    margin-left:25rem
+}
+div.role{
+    margin-left: 14rem;
+}
+div.user-list-table-user{
+    padding: 1rem 0rem;
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    background-color: #F1F4F5;
+}
+div.user-list-table-vertical-bar{
+    flex: 1;
+    height: 100%;
+    max-width: 0.5rem;
+    background-color: #359ADE;
+}
+div.user-list-table-profile-container{
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img.admin-userlist-user-img{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+}
+div.user-list-table-profile{
+    padding: 1rem 1rem;
+    width:3rem;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: white;
+    border-radius: 50%;
+    background-color: rgba(53, 154, 222, 0.78);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div.user-list-table-email-container{
+    margin-left: 5rem;
+    width: 25rem;
+    display: flex;
+}
+div.user-list-table-email{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color:rgba(0, 0, 0, 0.64);
+}
+div.user-list-table-name-container{
+    width: 20rem;
+}
+div.user-list-table-name{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color:rgba(0, 0, 0, 0.64);
+}
+div.user-list-table-role-container{
+    width: 10rem;
+}
+.user-list-table-edit{
+    margin-left: 5rem;
+    color:rgba(0, 0, 0, 0.64);
+    cursor: pointer;
+}
+.user-list-table-delete{
+    margin-left: 2rem;
+    color:rgba(0, 0, 0, 0.64);
+    cursor: pointer;
+}
+.user-list-table-dots{
+    margin-left: 5rem;
+    color:rgba(0, 0, 0, 0.64);
+    cursor: pointer;
+}

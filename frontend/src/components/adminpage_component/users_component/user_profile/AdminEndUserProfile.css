@@ -1,0 +1,180 @@
+div.admin-end-user-profile{
+    margin-top: 10rem;
+    width: 68vw;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    animation: adminUserVisible 0.3s ease-in-out 1;
+}
+@keyframes adminUserVisible {
+    from{
+       margin-top: 25rem;
+       opacity: 0;
+    }
+    to{
+        margin-top: 10rem;
+        opacity: 1;
+    }
+}
+div.admin-end-user-profile-invisible{
+    display: none;
+}
+div.admin-path span{
+    cursor: pointer;
+}
+div.admin-path span:hover{
+    color: #359ADE;
+}
+div.admin-user-profile-navigation-and-end-user-profile{
+    margin-top: 2.5rem;
+    margin-bottom: 10rem;
+    display: grid;
+    grid-template-columns: 2fr 6fr;
+    gap:5rem;
+}
+div.admin-user-profile-navigations{ 
+    /* height: 10vh; */
+    /* width: 15vw; */
+    padding: 5rem 1rem;
+    max-height: 9rem;
+    border-radius: 0.5rem;
+    /* background-color: rgb(123, 189, 189); */
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+div.admin-user-profile-navigation{
+    margin: 1rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+}
+.admin-user-profile-view-icon{
+    color: rgba(0, 0, 0, 0.78);
+    cursor: pointer;
+}
+.active-profile-view-icon{
+    color:rgba(53, 154, 222, 0.788);
+}
+div.admin-user-view-profile-txt{
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.78);
+    cursor: pointer;
+}
+div.active-view-profile-text{
+    color:rgba(53, 154, 222, 0.788);
+}
+div.admin-end-user-profile-info{
+    border-radius: 0.5rem;
+    padding: 2rem 4rem;
+    background-color: #fff;
+}
+div.admin-end-user-profile-title{
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #359ADE;
+}
+div.admin-end-user-profile-pic-and-info{
+    padding: 2rem 0rem;
+    display: flex;
+    gap: 3rem;
+}
+div.admin-end-user-profile-pic{
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+}
+div.admin-end-user-profile-pic-title{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.89);
+    margin-bottom: 3rem;
+}
+div.admin-end-user-profile-pic-img{
+    width: 17.1rem;
+}
+div.admin-end-user-profile-pic-img img{
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+}
+div.default-user-profile{
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    background-color: #359ADE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8rem;
+    color: #FFF;
+    text-transform: capitalize;
+}
+div.admin-end-user-profile-details{
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+}
+div.admin-end-user-profile-info-types{
+    padding: 3rem 0rem;
+    display: flex;
+    flex-direction: column;
+}
+div.admin-end-user-info-type{
+   padding: 1rem 0rem;
+   display: grid;
+   grid-template-columns: 1.7fr 3fr;
+}
+div.admin-end-user-info-type-title{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.7);
+}
+div.admin-end-user-info-type-txt{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: flex-start;
+}
+div.admin-end-user-registered-courses-info{
+    display: flex;
+    flex-direction: column;
+}
+div.admin-end-user-registered-courses-title{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.89);
+}
+div.admin-end-user-registered-courses-list{
+    padding: 2rem 0rem;
+    gap:1.5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+div.admin-end-user-registered-course{
+    background-color: #F1F4F5;
+    display: flex;
+    flex-direction: column;
+}
+img.admin-end-user-registered-course-img{
+    padding: 0.5rem;
+    width: 15.89rem;
+}
+div.admin-end-user-registered-course p{
+    margin: 0;
+    padding: 0.1rem 0.5rem;
+}
+p.admin-end-user-registered-course-title{
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #05375B;
+}
+p.admin-end-user-registered-course-name{
+    font-size: 1rem;
+    font-weight: 700;
+    color: #05375B;
+}

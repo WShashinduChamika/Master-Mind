@@ -1,69 +1,108 @@
 import React, { useState } from 'react'
 import './AdminSideNavBar.css'
 import logo from './images/logo.png'
-import { MdSpaceDashboard } from "react-icons/md";
 import { SiBookstack } from "react-icons/si";
+import { FaUsersGear } from "react-icons/fa6";
+import { MdLogout } from "react-icons/md";
+import { useNavigate } from 'react-router-dom';
 
 export default function AdminSideNavBar(props) {
-  
-  const [isDashboardNavigationClicked,setIsDashboardNavigationClicked] = useState(true)
-  const [isCourseNavigationClicked,setIsCourseNavigationClicked] =useState(false)
 
-  const handleDashboard = ()=>{
+  const [isUsersNavigationClicked, setIsUsersNavigationClicked] = useState(true)
+  const [isCourseNavigationClicked, setIsCourseNavigationClicked] = useState(false)
+  const  navigate = useNavigate()
 
-    setIsDashboardNavigationClicked(true)
+  const handleUsers = () => {
     setIsCourseNavigationClicked(false)
-    
-    if (props.isCoursesClicked) {
-      props.setIsCoursesClicked(!props.isCoursesClicked)
-    }
-    if(props.isCourseAddedClicked){
-      props.setIsCourseAddedClicked(!props.isCourseAddedClicked)
-    }
-    if(props.isCourseEditClicked){
-      props.setIsCourseEditClicked(!props.isCourseEditClicked)
-    }
+    setIsUsersNavigationClicked(true)
 
-
-    props.setIsDashboardClicked(!props.isDahsboardClicked)
-
-  }
-  
-  const handleCourses = ()=>{
-    
-    setIsCourseNavigationClicked(true)
-    setIsDashboardNavigationClicked(false)
-    
     if (props.isDahsboardClicked) {
       props.setIsDashboardClicked(!props.isDahsboardClicked)
     }
-
-    if(props.isCourseAddedClicked){
+    if (props.isCoursesClicked) {
+      props.setIsCoursesClicked(!props.isCoursesClicked)
+    }
+    if (props.isCourseEditClicked) {
+      props.setIsCourseEditClicked(!props.isCourseEditClicked)
+    }
+    if (props.isCourseAddedClicked) {
       props.setIsCourseAddedClicked(!props.isCourseAddedClicked)
     }
+    if (props.isUserProfileClicked) {
+      props.setIsUserProfileClicked(!props.isUserProfileClicked)
+    }
+    if (props.isUserEditClicked) {
+      props.setIsUserEditClicked(!props.setIsUserEditClicked)
+    }
+    if (props.isContactUsClicked) {
+      props.setIsContactUsClicked(!props.isContactUsClicked)
+    }
+    if (props.isContactUsFormClicked) {
+      props.setIsContactUsFormClicked(!props.isContactUsFormClicked)
+    }
+    setTimeout(() => {
+      props.setIsUsersClicked(!props.isUsersClicked)
+    }, 100);
+    //alert(props.isUsersClicked)
+  }
 
-    props.setIsCoursesClicked(!props.isCoursesClicked)
-    
+  const handleCourses = () => {
+
+    setIsCourseNavigationClicked(true)
+    setIsUsersNavigationClicked(false)
+
+    if (props.isCourseEditClicked) {
+      props.setIsCourseEditClicked(!props.isCourseEditClicked)
+    }
+    if (props.isUsersClicked) {
+      props.setIsUsersClicked(!props.isUsersClicked)
+    }
+    if (props.isUserProfileClicked) {
+      props.setIsUserProfileClicked(!props.isUserProfileClicked)
+    }
+    if (props.isUserEditClicked) {
+      props.setIsUserEditClicked(!props.setIsUserEditClicked)
+    }
+    if (props.isContactUsClicked) {
+      props.setIsContactUsClicked(!props.isContactUsClicked)
+    }
+    if (props.isContactUsFormClicked) {
+      props.setIsContactUsFormClicked(!props.isContactUsFormClicked)
+    }
+    setTimeout(() => {
+      props.setIsCoursesClicked(!props.isCoursesClicked)
+    }, 100)
+
+  }
+
+  const handleLogout = () => {
+    localStorage.removeItem('user')
+    navigate('/')
   }
 
   return (
     <div className='admin-side-nav-bar'>
       <img src={logo} className='admin-side-nav-bar-logo'></img>'
 
-       <div 
-          className={!isDashboardNavigationClicked?'admin-navigations':"admin-navigations admin-navigations-active"} 
-          onClick={handleDashboard}
-        >
-          <MdSpaceDashboard className='admin-nav-icon' size={20} />
-          <p className='admin-nav-link'>Dashboard</p>
-       </div>
+      <div
+        className={!isUsersNavigationClicked ? 'admin-navigations' : "admin-navigations admin-navigations-active"}
+        onClick={handleUsers}
+      >
+        <FaUsersGear className='admin-nav-icon' size={20} />
+        <p className='admin-nav-link'>Users</p>
+      </div>
 
-       <div
-        className={!isCourseNavigationClicked? 'admin-navigations' : "admin-navigations admin-navigations-active"}
+      <div
+        className={!isCourseNavigationClicked ? 'admin-navigations' : "admin-navigations admin-navigations-active"}
         onClick={handleCourses}
       >
         <SiBookstack className='admin-nav-icon' size={20} />
         <p className='admin-nav-link'>Courses</p>
+      </div>
+      
+      <div className='admin-profile-logout' onClick={handleLogout}> 
+           <MdLogout className='admin-logout-icon' size={25}></MdLogout>
+           <p>Log out</p>
       </div>
 
     </div>
