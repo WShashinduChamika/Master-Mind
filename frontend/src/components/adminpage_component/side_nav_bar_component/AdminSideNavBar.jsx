@@ -3,6 +3,7 @@ import './AdminSideNavBar.css'
 import logo from './images/logo.png'
 import { SiBookstack } from "react-icons/si";
 import { FaUsersGear } from "react-icons/fa6";
+import { MdContactMail } from "react-icons/md";
 import { MdLogout } from "react-icons/md";
 import { useNavigate } from 'react-router-dom';
 
@@ -10,15 +11,16 @@ export default function AdminSideNavBar(props) {
 
   const [isUsersNavigationClicked, setIsUsersNavigationClicked] = useState(true)
   const [isCourseNavigationClicked, setIsCourseNavigationClicked] = useState(false)
+  const [isContactUsNaviagationClicked,setIsContactUsNavigationClicked] = useState(false)
+
   const  navigate = useNavigate()
 
   const handleUsers = () => {
+
+    setIsContactUsNavigationClicked(false)
     setIsCourseNavigationClicked(false)
     setIsUsersNavigationClicked(true)
 
-    if (props.isDahsboardClicked) {
-      props.setIsDashboardClicked(!props.isDahsboardClicked)
-    }
     if (props.isCoursesClicked) {
       props.setIsCoursesClicked(!props.isCoursesClicked)
     }
@@ -47,7 +49,8 @@ export default function AdminSideNavBar(props) {
   }
 
   const handleCourses = () => {
-
+    
+    setIsContactUsNavigationClicked(false)
     setIsCourseNavigationClicked(true)
     setIsUsersNavigationClicked(false)
 
@@ -73,6 +76,33 @@ export default function AdminSideNavBar(props) {
       props.setIsCoursesClicked(!props.isCoursesClicked)
     }, 100)
 
+  }
+  
+  const handleContactUs = ()=>{
+
+    setIsCourseNavigationClicked(false)
+    setIsUsersNavigationClicked(false)
+    setIsContactUsNavigationClicked(true)
+
+    if(props.isCoursesClicked){
+      props.setIsCoursesClicked(!props.isCoursesClicked)
+    }
+    if(props.isCourseEditClicked){
+      props.setIsCourseEditClicked(!props.isCourseEditClicked)
+    }
+    if(props.isUsersClicked){
+      props.setIsUsersClicked(!props.isUsersClicked)
+    }
+    if(props.isUserProfileClicked){
+      props.setIsUserProfileClicked(!props.isUserProfileClicked)
+    }
+    if(props.isUserEditClicked){
+       props.setIsUserEditClicked(!props.setIsUserEditClicked)
+    }
+    setTimeout(() => {
+      props.setIsContactUsClicked(true)
+    }, 100);
+    //alert(props.isUsersClicked)
   }
 
   const handleLogout = () => {
@@ -100,6 +130,14 @@ export default function AdminSideNavBar(props) {
         <p className='admin-nav-link'>Courses</p>
       </div>
       
+      <div
+        className={!isContactUsNaviagationClicked? 'admin-navigations' : "admin-navigations admin-navigations-active"}
+        onClick={handleContactUs}
+      >
+        <MdContactMail className='admin-nav-icon' size={18} />
+        <p className='admin-nav-link'>Contact Us</p>
+      </div>
+
       <div className='admin-profile-logout' onClick={handleLogout}> 
            <MdLogout className='admin-logout-icon' size={25}></MdLogout>
            <p>Log out</p>
