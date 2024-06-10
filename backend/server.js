@@ -17,6 +17,9 @@ const courseRegisterRoutes = require('./routes/course_register')
 //get user routes
 const userRoutes = require('./routes/user')
 
+//get contact us routes
+const contactUsRoutes = require('./routes/contact_us')
+
 //express app
 const app = express()
 
@@ -43,6 +46,8 @@ app.use('/api/course_section',courseSectionRoutes)
 app.use('/api/user',userRoutes)
 
 app.use('/api/course_register',courseRegisterRoutes)
+
+app.use('/api/contact_us',contactUsRoutes)
 
 //connect to db
 mongoose.connect(process.env.MONG_URI)

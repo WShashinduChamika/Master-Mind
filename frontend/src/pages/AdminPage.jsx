@@ -3,6 +3,7 @@ import AdminSideNavBar from '../components/adminpage_component/side_nav_bar_comp
 import AdminHoirzontalBar from '../components/adminpage_component/admin_horizontal_top_bar_component/AdminHoirzontalBar'
 import AdminCourseList from '../components/adminpage_component/courses_component/AdminCourseList'
 import UsersList from '../components/adminpage_component/users_component/UsersList'
+import ContactUsList from '../components/adminpage_component/contact_us_component/ContactUsList'
 
 export default function AdminPage() {
 
@@ -15,6 +16,10 @@ export default function AdminPage() {
   const [isUserProfileClicked, setIsUserProfileClicked] = useState(false)
   const [isUserEditClicked, setIsUserEditClicked] = useState(false)
   const [isUserDeleted, setIsUserDeleted] = useState(false)
+
+  const [isContactUsClicked, setIsContactUsClicked] = useState(false)
+  const [isContactUsFormClicked, setIsContactUsFormClicked] = useState(false)
+
 
   const [courseID, setCourseID] = useState('')
 
@@ -44,6 +49,11 @@ export default function AdminPage() {
           setIsUserEditClicked={setIsUserEditClicked}
           isUserDeleted={isUserDeleted}
           setIsUserDeleted={setIsUserDeleted}
+
+          isContactUsClicked={isContactUsClicked}
+          setIsContactUsClicked={setIsContactUsClicked}
+          isContactUsFormClicked={isContactUsFormClicked}
+          setIsContactUsFormClicked={setIsContactUsFormClicked}
         >
         </AdminSideNavBar>
       </div>
@@ -74,6 +84,13 @@ export default function AdminPage() {
           setIsUserDeleted={setIsUserDeleted}
         >
         </UsersList>
+
+        <ContactUsList
+            isContactUsClicked={isContactUsClicked}
+            setIsContactUsClicked={setIsContactUsClicked}
+            isContactUsFormClicked={isContactUsFormClicked}
+            setIsContactUsFormClicked={setIsContactUsFormClicked}
+          />
       </div>
 
     </div>
