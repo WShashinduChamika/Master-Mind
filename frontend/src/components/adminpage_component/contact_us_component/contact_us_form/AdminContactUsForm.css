@@ -1,0 +1,73 @@
+div.admin-contact-us-form{
+    position: absolute;
+    top:20vh;
+    right: 20vw;
+    min-width: 35vw;
+    max-width: 35vw;
+    padding: 2rem 2rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+div.admin-contact-us-form-title{
+    padding: 2rem 0rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #359ADE;
+}
+div.admin-contact-us-form-row1{
+    padding: 0.5rem 0rem;
+    gap:4rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+div.admin-contact-us-form-details-type{
+    min-width: 20rem;
+    /* padding: 1rem 0rem; */
+    display: flex;
+    flex-direction: column;
+}
+div.admin-contact-us-form-details-type p{
+    margin: 0;
+}
+p.admin-contact-us-from-detail-title{
+    padding: 0.5rem 0rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.722);
+}
+p.admin-contact-us-from-detail-detail{
+    padding: 0.8rem 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.922);
+    border: 0.1rem solid #359ADE;
+}
+div.admin-contact-us-form-row2{
+    padding: 0.5rem 0rem;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+div.admin-contact-us-form-row3{
+    padding: 0.5rem 0rem;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+div.admin-contact-us-form-row3 p.admin-contact-us-from-detail-detail{
+    min-height: 10rem;
+}
+div.admin-contact-us-form-reply-btn{
+    padding: 2rem 0rem;
+    display: flex;
+    justify-content: flex-end;
+}
+div.admin-contact-us-form-reply-btn button{
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255,0.7);
+    padding: 0.5rem 1.5rem;
+    background-color: rgba(53, 154, 222, 0.9);
+    border: none;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
