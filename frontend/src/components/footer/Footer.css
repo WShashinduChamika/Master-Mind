@@ -1,94 +1,83 @@
 div.footer-content{
-    position: absolute;
-    top:220vh;
-    margin-left: 0.5vw;
-    width: 97.89vw;
-    height: 53.35vh;
+    margin-top: 15rem;
+    margin-left: 0rem;
+    padding: 4rem 8rem;
+    max-width: 97.89vw;
     background-color: #05375B;
     display: flex;
     flex-direction: column;
 }
 div.upper-part{
-    margin-top: 3vh;
-    margin-left: 5vw;
-    margin-right: 12vw;
     display: flex;
     justify-content: space-between;
 }
 div.intro-part{
-    margin-top: 1vh;
+    margin-top: 0.7rem;
     display: flex;
     flex-direction: column;
 }
 img.footer-logo{
-    height: 6.396vh;
     width: 17.95vw;
 }
 p.footer-intro-text{
     color: #BCC6CC;
-    /* font-family: Lato; */
-    font-size: 15px;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
 div.footer-links{
-    margin-top: 3vh;
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
 }
 p.footer-link-title{
     color: #EFF3F5;
-    /* font-family: Montserrat; */
-    font-size: 18px;
+    font-size: 1.8rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
 }
 .footer-link{
-    margin-bottom: 2vh;
+    margin-bottom: 1.4rem;
     color: #BCC6CC;
-    /* font-family: Montserrat; */
-    font-size: 13px;
+    font-size: 1.3rem;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
     text-decoration: none;
 }
 div.contact-type{
-    margin-bottom: 2vh;
+    margin-bottom: 1.4rem;
     display: flex;
 }
 p.contact-deatail{
     margin-top: -0.2vh;
-    margin-left: 1.5vw;
+    margin-left: 1.3rem;
     color: #BCC6CC;
-    /* font-family: Montserrat; */
-    font-size: 13px;
+    font-size: 1.3rem;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
 }
 div.down-part{
-    margin-top: 3vh;
-    margin-left: 5vw;
-    width: 86.9vw;
-    height: 10.45vh;
+    margin-top: 2.3rem;
+    padding: 1.0rem 3rem;
+    max-width: 86.9vw;
     background-color: rgba(242, 246, 248, 0.25);
-    border-radius: 20px;
+    border-radius: 2.0rem;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 p.copyright-text{
-    margin-left: 3vw;
-    margin-right: 60vw;
     color: #F2F6F8;
-    /* font-family: Inter; */
-    font-size: 12px;
+    font-size: 1.2rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
 .social-media-icon{
-    margin-right: 2vw;
+    margin-right: 2rem;
 }
+
