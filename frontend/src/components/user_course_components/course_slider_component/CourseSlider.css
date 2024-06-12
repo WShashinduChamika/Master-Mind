@@ -1,0 +1,21 @@
+div.course-slider{
+    margin-top: 1rem;
+    height:80vh;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center ;
+}
+div.course-image-slide {
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+}
+div.course-image-slide img{
+    opacity: 1;
+    height: 80vh;
+    width: 100%;
+}
+div.course-image-slide h1{
+    position: relative;
+}
