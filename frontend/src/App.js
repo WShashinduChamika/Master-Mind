@@ -8,6 +8,7 @@ import SignupPage from './pages/SignupPage';
 import LoginPage from './pages/LoginPage';
 import ContactPage from './pages/Contact'
 import AdminPage from './pages/AdminPage';
+import CoursePage from './pages/CoursePage';
 function App() {
   return (
    <Routes>
@@ -16,6 +17,7 @@ function App() {
      <Route path='/signup' exact Component={SignupPage}></Route>
      <Route path='/login' exact Component={LoginPage}></Route>
      <Route path='/contact' exact Component ={ContactPage}></Route>
+     <Route path='/course' exact Component ={CoursePage}></Route>
      <Route path='/admin' exact Component={AdminPage}></Route>
    </Routes>
   );

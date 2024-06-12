@@ -1,0 +1,105 @@
+div.user-course-list{
+    margin-top: 8rem;
+    width: 95vw;
+    margin-top: 4vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    animation: coursePopUp 0.3s ease-in-out 1;
+}
+@keyframes coursePopUp {
+    0%{
+        margin-top: 25rem;
+        opacity: 0;
+    }
+    100%{
+        margin-top: 8rem;
+        opacity: 1;
+    }
+}
+div.user-course-list-invisible{
+    display:none;
+}
+div.user-course-title{
+    margin-top: 4rem;
+    font-size: 6.4rem;
+    font-weight: 400;
+    color:#05375B
+}
+p.user-course-title-text{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color:#95A0A8
+}
+div.user-courses-section{
+    padding: 5rem 0rem;
+    margin-top: 5rem;
+    margin-left: 5rem;
+    width: 100vw;
+    background-color:#F1F4F5;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+}
+div.user-courses-container{
+    margin-left: 8rem;
+    width: 90%;
+    /* background-color: aqua; */
+    /* display: flex; */
+}
+div.item{
+    height: 10rem;
+    width: 30rem;
+    background-color: #05375B;
+}
+div.user-course{
+    margin-right: 3rem;
+    padding: 1rem 0.5rem;
+    max-width: 25.1rem;
+    min-width: 25.1rem;
+    height: 35rem;
+    min-height: 35rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+    /* box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.1); */
+}
+
+img.user-course-img{
+    max-width: 26.3rem;
+    max-height: 23.4rem;
+}
+p.user-course-name{
+    margin:0;
+    padding: 0rem 1rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #05375B;
+}
+p.user-course-title{
+    margin:0;
+    padding: 0rem 1rem;
+    margin-top: 0.2rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #05375B;
+}
+button.user-course-btn{
+    margin: 2rem 1rem;
+    padding: 1.2rem 0rem;
+    max-width: 90%;
+    background-color: rgb(53, 154, 222,0.59);
+    color: #ffffffc2;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border:none;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+button.user-course-btn:hover{
+    background-color: rgb(53, 154, 222,1);
+    color: #ffffff;
+}
+
