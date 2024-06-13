@@ -1,0 +1,42 @@
+div.user-top-bar{
+    padding: 1rem 0rem;
+    position: fixed;
+    top:0;
+    left:18.5vw;
+    width: 81vw;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.3rem solid #F1F4F5;
+}
+.user-top-bar-home{
+    margin-left: 5rem;
+    cursor: pointer;
+    transform: scale(0.9);
+    transition: 0.2s ease-in-out;
+ }
+ .user-top-bar-home:hover{
+    transform: scale(1.2);
+    color: rgb(53, 154, 222);
+ }
+ div.user-top-bar-user-profile{
+     margin-right: 4rem;
+     padding: 0.7rem 1.2rem;
+     font-size: 1.5rem;
+     font-weight: 600;
+     color: white;
+     text-transform: capitalize;
+     border-radius: 50%;
+     background-color: rgba(53, 155, 222, 0.78);
+     cursor:pointer;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ div.user-top-bar img{
+    margin-right: 4rem;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+ }

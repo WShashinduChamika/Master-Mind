@@ -1,0 +1,88 @@
+div.user-profile-page{
+    min-height:100vh;
+    width: 100vw;
+    display: flex;
+ }
+ div.user-profile-page-side-nav-bar{
+     min-width: 18.24vw;
+ }
+ div.user-page-content-side{
+     background-color: #F1F4F5;
+     display: flex;
+     flex-direction: column;
+ }
+ div.user-side-nav-bar{
+     position: fixed;
+     height: 100vh;
+     width: 18.24vw;
+     background-color: rgba(5, 55, 91, 0.89);
+     display: flex;
+     flex-direction: column;
+ }
+ img.user-side-nav-bar-logo{
+     padding: 1.8rem 2rem;
+     margin-bottom: 5rem;
+     width:18rem;
+ }
+ div.user-side-nav-bar-user-profile{
+     margin-top:2vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: center;
+ }
+ div.user-navigations{
+     margin: 0.5rem 0rem;
+     margin-bottom: 1rem;
+     width: 100%;
+     gap:1rem;
+     display: flex;
+     align-items: center;
+     cursor: pointer;
+ }
+ div.user-navigations-active{
+     background-color: rgba(5, 55, 91, 0.94);
+     border:none;
+ }
+ div.user-navigations:hover{
+     background-color: rgba(5, 55, 91, 0.94);
+ }
+ .user-nav-icon{
+     padding: 1.4rem 0.3rem;
+     padding-left: 7rem;
+     color: rgb(255, 255, 255,0.6);
+ }
+ div.user-navigations:hover .user-nav-icon{
+     color: rgb(255, 255, 255,0.8);
+ }
+ p.user-nav-link{
+     margin:0;
+     padding: 1.4rem 0.2rem;
+     font-size: 1.5rem;
+     font-weight: 600;
+     color: rgb(255, 255, 255,0.7);  
+ }
+ div.user-navigations:hover .user-nav-link{
+     color: rgb(255, 255, 255,0.8);
+ }
+ div.profile-logout{
+     position: absolute;
+     bottom: 0rem;
+     width: 100%;
+     gap:1rem;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     cursor: pointer;
+     background-color: rgba(5, 55, 91, 0.94);
+ }
+ .logout-icon{
+    color: rgb(255, 255, 255,0.7);  
+ }
+ div.profile-logout p{
+    margin:0;
+    padding: 1.4rem 0.2rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: rgb(255, 255, 255,0.7);  
+ }
