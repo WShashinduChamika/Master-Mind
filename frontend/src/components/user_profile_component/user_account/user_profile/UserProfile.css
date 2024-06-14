@@ -1,0 +1,182 @@
+div.user-profile{
+    margin-left: 5rem;
+    width: 68vw;
+    display: flex;
+    flex-direction: column;
+    animation: adminUserVisible 0.3s ease-in-out 1;
+}
+@keyframes adminUserVisible {
+    from{
+       margin-top: 25rem;
+       opacity: 0;
+    }
+    to{
+        margin-top: 0rem;
+        opacity: 1;
+    }
+}
+div.user-profile-invisible{
+    display: none;
+}
+div.user-navigation-title{
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #061017;
+}
+div.user-path{
+    margin: 1rem 0rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #061017d0;
+}
+div.user-path span{
+    cursor: pointer;
+}
+div.user-path span:hover{
+    color: #359ADE;
+}
+div.user-profile-navigation-and-user-profile{
+    margin-top: 2.5rem;
+    margin-bottom: 10rem;
+    display: grid;
+    grid-template-columns: 2fr 6fr;
+    gap:5rem;
+}
+div.user-profile-navigations{ 
+    /* height: 10vh; */
+    /* width: 15vw; */
+    padding: 5rem 1rem;
+    max-height: 9rem;
+    border-radius: 0.5rem;
+    /* background-color: rgb(123, 189, 189); */
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+div.user-profile-navigation{
+    margin: 1rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+}
+/* div.admin-user-profile-navigation:hover .admin-user-profile-view-icon, .admin-user-view-profile-txt{
+        color:rgba(53, 154, 222, 0.788)
+} */
+.user-profile-view-icon{
+    color: rgba(0, 0, 0, 0.78);
+    cursor: pointer;
+}
+.active-profile-view-icon{
+    color:rgba(53, 154, 222, 0.788);
+}
+div.user-view-profile-txt{
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.78);
+    cursor: pointer;
+}
+div.active-view-profile-text{
+    color:rgba(53, 154, 222, 0.788);
+}
+div.user-profile-info{
+    border-radius: 0.5rem;
+    padding: 2rem 4rem;
+    background-color: #fff;
+}
+div.user-profile-title{
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #359ADE;
+}
+div.user-profile-pic-and-info{
+    padding: 2rem 0rem;
+    display: flex;
+    gap: 3rem;
+}
+div.user-profile-pic{
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+}
+div.user-profile-pic-title{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.89);
+    margin-bottom: 3rem;
+}
+div.user-profile-pic-img{
+    width: 17.1rem;
+}
+div.user-profile-pic-img img{
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+}
+div.user-profile-details{
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+}
+div.user-profile-info-types{
+    padding: 3rem 0rem;
+    display: flex;
+    flex-direction: column;
+}
+div.user-info-type{
+   padding: 1rem 0rem;
+   display: grid;
+   grid-template-columns: 1.7fr 3fr;
+}
+div.user-info-type-title{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.7);
+}
+div.user-info-type-txt{
+    margin-left: 1rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: flex-start;
+}
+div.user-registered-courses-info{
+    display: flex;
+    flex-direction: column;
+}
+div.user-registered-courses-title{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.89);
+}
+div.user-registered-courses-list{
+    padding: 2rem 0rem;
+    gap:1.5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+div.user-registered-course{
+    background-color: #F1F4F5;
+    display: flex;
+    flex-direction: column;
+}
+img.user-registered-course-img{
+    padding: 0.5rem;
+    width: 15.89rem;
+}
+div.user-registered-course p{
+    margin: 0;
+    padding: 0.1rem 0.5rem;
+}
+p.user-registered-course-title{
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #05375B;
+}
+p.user-registered-course-name{
+    font-size: 1rem;
+    font-weight: 700;
+    color: #05375B;
+}

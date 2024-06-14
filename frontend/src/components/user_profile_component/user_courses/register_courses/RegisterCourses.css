@@ -1,0 +1,73 @@
+div.register-courses{
+    margin-left: 5rem;
+}
+div.register-courses-invisible{
+    display: none;
+}
+.user-register-course{
+    margin-bottom: 5rem;
+    padding: 1rem 0.5rem;
+    height: 35vh;
+    width: 18.5vw;
+    background-color: #FFF;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+div.user-register-courses-section{
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    flex-wrap: wrap;
+}
+div.user-register-course{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img.user-register-course-img{
+    height: 25vh;
+    width: 100%;
+}
+div.user-register-course-details-and-edit-delete{
+    display: flex;
+}
+div.user-register-course-details{
+    width: 20rem;
+    padding: 1.2rem 0rem;
+    gap:0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+p.user-register-course-name{
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #05375B;
+}
+p.user-register-course-title{
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #05375B;
+}
+div.user-register-course-edit-delete{
+    padding: 1rem 0rem;
+    gap:0.5rem;
+    display: flex;
+    align-items: flex-end;
+}
+div.user-register-course-edit-delete .admin-course-icon{
+    color: #359adece;
+    transform: scale(1);
+    transition: 0.1s ease-in-out;
+}
+div.user-register-course-edit-delete .admin-course-icon:hover{
+    color: #359ADE;
+    transform: scale(1.2);
+}

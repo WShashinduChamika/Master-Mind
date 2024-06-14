@@ -1,0 +1,212 @@
+div.user-edit{
+    margin-left: 5rem;
+    width: 68vw;
+    display: flex;
+    flex-direction: column;
+    animation: userEditVisible 0.3s ease-in-out 1;
+}
+@keyframes userEditVisible {
+    from{
+       margin-top: 25rem;
+       opacity: 0;
+    }
+    to{
+        margin-top: 0rem;
+        opacity: 1;
+    }
+}
+div.user-edit-invisible{
+    display: none;
+}
+div.user-navigation-title{
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #061017;
+}
+div.user-path{
+    margin: 1rem 0rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #061017d0;
+}
+div.user-path span{
+    cursor: pointer;
+}
+div.user-path span:hover{
+    color: #359ADE;
+}
+div.user-profile-navigation-and-user-profile{
+    margin-top: 2.5rem;
+    margin-bottom: 10rem;
+    display: grid;
+    grid-template-columns: 2fr 6fr;
+    gap:5rem;
+}
+div.user-profile-navigations{ 
+    /* height: 10vh; */
+    /* width: 15vw; */
+    padding: 5rem 1rem;
+    max-height: 9rem;
+    border-radius: 0.5rem;
+    /* background-color: rgb(123, 189, 189); */
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+div.user-profile-navigation{
+    margin: 1rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+}
+/* div.admin-user-profile-navigation:hover .admin-user-profile-view-icon, .admin-user-view-profile-txt{
+        color:rgba(53, 154, 222, 0.788)
+} */
+.user-profile-view-icon{
+    color: rgba(0, 0, 0, 0.78);
+    cursor: pointer;
+}
+.active-profile-view-icon{
+    color:rgba(53, 154, 222, 0.788);
+}
+div.user-view-profile-txt{
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.78);
+    cursor: pointer;
+}
+div.active-view-profile-text{
+    color:rgba(53, 154, 222, 0.788);
+}
+div.user-edit-info{
+    border-radius: 0.5rem;
+    padding: 2rem 4rem;
+    background-color: #fff;
+}
+div.user-edit-title{
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #359ADE;
+}
+div.user-edit-profile-pic{
+    padding: 3rem 0rem;    
+}
+div.user-edit-profile-pic-title{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.89);
+    margin-bottom: 3rem;
+}
+div.user-edit-profile-pic-img{
+    gap:3rem;
+    display: flex;
+}
+div.user-edit-profile-pic-img img{
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+}
+div.default-user-profile{
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    background-color: #359ADE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8rem;
+    color: #FFF;
+    text-transform: capitalize;
+}
+div.user-edit-profile-edit-btns{
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    max-width: 200px;
+}
+
+input.user-edit-profile-edit-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 50%;
+    height: 100%;
+    cursor: pointer;
+}
+.custom-file-upload {
+    display: inline-block;
+    width: 50%;
+    padding: 1rem 1.5rem;
+    background-color: #359ade9a;
+    font-size: 1.4rem;
+    color: white;
+    text-align: center;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.custom-file-upload:hover {
+    background-color: #359ade;
+}
+
+div.user-edit-profile-details{
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+}
+div.user-edit-profile-edit-personal-info-row{
+    gap:5rem;
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+}
+div.user-edit-profile-edit-personal-info-row-type{
+    display: flex;
+    flex-direction: column;
+}
+div.user-edit-profile-edit-personal-info-row-type p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color:rgba(0, 0, 0, 0.8);
+}
+div.user-edit-profile-edit-personal-info-row-type input{
+    padding: 1rem 1rem;
+    font-size: 1.4rem;
+    border: 0.1rem solid #359ADE;
+}
+.user-edit-profile-edit-personal-info-row-type-dropdown-control{
+    padding: 1rem 1rem;
+    font-size: 1.4rem;
+    color: #000;
+    border: 0.1rem solid #359ADE;
+}
+.user-edit-profile-edit-personal-info-row-type-dropdown-menu{
+    padding: 1rem 0rem;
+    font-size: 1.4rem;
+    color: #000;
+    border: 0.1rem solid #359ADE;
+}
+div.user-edit-profile-edit-personal-info-row-type input:focus{
+    padding: 1rem 1rem;
+    outline: 0.2rem solid #359ADE;
+}
+div.user-edit-profile-edit-save-changes-btn{
+    padding: 2rem 0rem;
+    display: flex;
+    justify-content: flex-end;
+}
+div.user-edit-profile-edit-save-changes-btn button{
+    color: rgb(255, 255, 255,0.7);
+    padding: 0.7rem 1.5rem;
+    background-color: rgba(53, 154, 222, 0.6);
+    border: none;
+    border-radius: 0.5rem;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+div.user-edit-profile-edit-save-changes-btn button:hover{
+    background-color: rgba(53, 154, 222, 1);
+    color:#FFF;
+}
