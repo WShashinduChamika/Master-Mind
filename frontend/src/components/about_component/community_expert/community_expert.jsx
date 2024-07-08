@@ -5,7 +5,8 @@ import Exp2 from './images/exp2.png'
 import Exp3 from './images/exp3.png'
 import Exp4 from './images/exp4.png'
 import { FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
-
+import { motion } from 'framer-motion'
+import { fadein } from '../../../Variants.js'
 
 
 export default function community_expert() {
@@ -34,12 +35,23 @@ export default function community_expert() {
     ]
     return (
         <div className='comunity-container'>
-            <div className='text'>
+            <motion.div
+                variants={fadein('down', 0.2)}
+                initial='hidden'
+                whileInView='show'
+                viewport={{ once: true, amount: 0.7 }}
+                className='text'>
                 <h2>Community express</h2>
                 <p>“Elevate your learning experience with us! Explore diverse courses tailored for success on our user-friendly online platform. Join today!"</p>
 
-            </div>
-            <div className='experts'>
+            </motion.div>
+
+            <motion.div
+                variants={fadein('up', 0.2)}
+                initial='hidden'
+                whileInView='show'
+                viewport={{ once: true, amount: 0.7 }}
+                className='experts'>
 
                 {expertList.map((expert, index) => (
                     <div className='expert' key={index}>
@@ -63,7 +75,7 @@ export default function community_expert() {
                 ))}
 
 
-            </div>
+            </motion.div>
 
         </div>
     )
