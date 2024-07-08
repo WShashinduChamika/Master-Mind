@@ -4,7 +4,15 @@ div.why-choose-part{
     flex-direction: column;
     align-items: center;
 }
+div.why-choose-title-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
 div.why-choose-title{
+    max-width: 50%;
     padding: 0.8rem 2rem;
     background-color: #C0DCEF;
     border-radius: 2%;

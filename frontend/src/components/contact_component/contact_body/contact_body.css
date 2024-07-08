@@ -1,85 +1,70 @@
-.contact_body{
-    margin-top: 19px;
+.contact-body{
+    margin-top: 10rem;
+    gap: 5rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: flex-start;
-    margin-left: 37px;
-  
-    
 }
-.get_in_touch{
-    width: 538px;
-    
+.get-in-touch{
+    padding: 0rem 5rem;
+    gap:3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 .text h1{
-    margin-top: 10px;
-    margin-left: 102px;
     color: #05375B;
     font-size: 40px;
     font-weight: 700;
-
 }
 .text p{
-    margin-top: 10px;
-    color: 15px;
+    font-size: 1.5rem;
     font-weight: 400;
-    margin-left: 76px;
 } 
 .text hr{
-    width: 508px;
-    height: 2px;
+    width: 100%;
+    height: 0.2rem;
     background-color: #16405D;
-    margin-top: 29px;
-    margin-left: 34px;
 }
 .connect{
-    margin-top: 43px;
-    margin-left: 34px;
+   padding: 0rem 5rem;
+   display: flex;
+   flex-direction: column;
+   /* background-color: azure; */
 }
-.connect_option h2{
+.connect-option h2{
     color: #000000;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
-
 }
 .option{
+    gap:3rem;
     display: flex;
     flex-direction: row;
     justify-content:flex-start;
-   
+    align-items: center;
 }
 .option img{
-    height: 24px;
-    width: 24px;
     cursor: pointer;
-    margin-top: 31px;
 }
 .option p{
     font-size: 15px;
     font-weight: 400;
     color:#000000 ;
-    margin-left:96px;
-    margin-top: 34px;
-
-    
 }
 .pro_link{
+    gap:3rem;
     display: flex;
     flex-direction: row;
-   
 }
 
 .link{
-    width: 46px;
-    height: 46px;
     background-color: #359ADE;
-    margin-left: 34px;
-    margin-top: 12px;
     border-radius: 5px;
 }
 .link img{
-    padding: 6px;
+    padding:0.5rem;
 }
 
 .link:hover{
@@ -92,9 +77,6 @@
     height: 641px;
     background-color: #F2F6F8;
     border-radius: 14px;
-    margin-right: 67px;
-    margin-top: 55px;
-
 }
 .form h1{
     font-size: 40px;
@@ -130,7 +112,6 @@
     margin-left:63px ;
     padding:12px 39px ;
     margin-right: 55px;
-
 }
 .form-colum input{
     width: 652px;
