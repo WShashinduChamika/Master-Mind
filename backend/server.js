@@ -20,6 +20,9 @@ const userRoutes = require('./routes/user')
 //get contact us routes
 const contactUsRoutes = require('./routes/contact_us')
 
+//get email routes
+const emailRoutes = require('./routes/email')
+
 //express app
 const app = express()
 
@@ -48,6 +51,8 @@ app.use('/api/user',userRoutes)
 app.use('/api/course_register',courseRegisterRoutes)
 
 app.use('/api/contact_us',contactUsRoutes)
+
+app.use('/api/course_register_email',emailRoutes)
 
 //connect to db
 mongoose.connect(process.env.MONG_URI)

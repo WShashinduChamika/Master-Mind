@@ -49,6 +49,21 @@ export default function CourseRegister(props) {
         }
     }
 
+    const sendRegistserMail = async (courseName,email) => {
+        const response = await fetch('/api/course_register_email/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({courseName,email})
+        })
+        const json = await response.json()
+        if (response.ok) {
+            alert('Email sent')
+        }
+        else {
+            alert('error')
+        }
+    }
+
     const createCourseRegistration = async (name, email, contact_Number, course_ID, user_ID) => {
         const response = await fetch('/api/course_register/', {
             method: 'POST',
@@ -58,6 +73,7 @@ export default function CourseRegister(props) {
         const json = await response.json()
         if (response.ok) {
             props.setIsCourseRegisterClicked(!props.isCourseRegisterClicked)
+            await sendRegistserMail(courseName,email)
             Swal.fire({
                 title: "Course Registration Success!",
                 text: "Course registration process is successfully done.",
@@ -73,7 +89,14 @@ export default function CourseRegister(props) {
             alert(json.error)
         }
     }
-
+    
+    const sendEmail = async()=>{
+        const response = await fetch('/api/course_register_email/',{
+            method:'POST',
+            headers:{"Content-Type":"application/json"},
+            body:{}
+        })
+    }
     const handleRegisterCourse = (e) => {
 
         if (userID) {
