@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import '../signup_form/SignupForm.css'
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import SweetAlert2 from 'react-sweetalert2';
+import Swal from 'sweetalert2';
 
 export default function LoginForm() {
 
@@ -48,31 +50,30 @@ export default function LoginForm() {
     }
 
     if (response.ok) {
-      // save the user to local storage
       localStorage.setItem('user', JSON.stringify(json))
-      //console.log(localStorage.getItem('user'))
-      //const parssedata = JSON.parse(localStorage.getItem('user'))
-      //alert(parssedata.email)
-      //  console.log(json.name)
-      //  let username = json.name
-      //  console.log("User name"+username)
-      //  setName(username)
-      //  alert(username)
       setRole(json.role)
-      alert(json.role)
+      //alert(json.role)
       setIsLoading(false)
-      //const name = {key:username}
       userNavigate(json.role)
     }
 
 
   }
-  const userNavigate = (role)=>{
-     if(role==='end-user'){
-       navigate('/')
-     }else{
-       navigate('/admin')
-     }
+  const userNavigate = (role) => {
+    if (role === 'end-user') {
+      navigate('/')
+    } else {
+      Swal.fire({
+        title: "Admin User Authorization Success!",
+        text: "You can use this account to manage the system",
+        icon: "success",
+        confirmButtonColor: "#359ADE"
+      }).then((result) => {
+        if (result.isConfirmed) {
+            navigate('/admin')
+        }
+      });
+    }
   }
 
   return (
