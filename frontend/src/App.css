@@ -28,3 +28,8 @@ div.admin-navigation-title {
   font-weight: 500;
   color: #061017;
 }
+
+.swal2-confirm {
+  background-color: #007bff; 
+  color: white; 
+}

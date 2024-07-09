@@ -1,8 +1,8 @@
 import React from 'react'
 import './CourseSlider.css'
-import slideImg1 from './images/slide1.png'
-import slideImg2 from './images/slide2.png'
-import slideImg3 from './images/slide3.png'
+import slideImg1 from './images/1.png'
+import slideImg2 from './images/2.png'
+import slideImg3 from './images/3.png'
 
 
 
