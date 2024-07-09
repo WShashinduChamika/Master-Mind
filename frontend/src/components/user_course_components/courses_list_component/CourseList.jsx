@@ -3,6 +3,8 @@ import './CourseList.css'
 import courseImg from './images/course2.png'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { motion } from 'framer-motion'
+import { fadein } from '../../../Variants'
 
 
 export default function CourseList(props) {
@@ -66,31 +68,45 @@ export default function CourseList(props) {
 
   return (
     <div className='user-course-list' id='user-course-list'>
-      <div className='user-course-title'>Our Popular Courses</div>
-      <p className='user-course-title-text'>“Elevate your learning experience with us!
-        Explore diverse courses tailored for success on our user-friendly online platform. Join today!"</p>
+      <motion.div
+        variants={fadein('right', 0.2)}
+        initial='hidden'
+        whileInView='show'
+        viewport={{ once: true, amount: 0.7 }}
+        className='user-course-title-container'
+      >
+        <div className='user-course-title'>Our Popular Courses</div>
+        <p className='user-course-title-text'>“Elevate your learning experience with us!
+          Explore diverse courses tailored for success on our user-friendly online platform. Join today!"</p>
+      </motion.div>
+
       <div className='user-courses-section'>
 
 
-      <div className='user-courses-container'>
+        < motion.div
+           variants={fadein('left', 0.2)}
+           initial='hidden'
+           whileInView='show'
+           viewport={{ once: true, amount: 0.7 }}
+          className='user-courses-container'>
 
-        <Carousel 
-          // showDots={true}
-          responsive={responsive}
-          arrows={props.isCourseClicked?false:true} 
-        >
-          {courseList.map((course, index) => (
-            <div className='user-course'>
-              <img src={courseImg} className='user-course-img'></img>
-              <p className='user-course-name'>{course.name}</p>
-              <p className='user-course-title'>{course.title}</p>
-              <button className='user-course-btn' onClick={() => { handleViewBtn(course._id) }}>More Details</button>
-            </div>
-          ))}
-        
-        </Carousel>
+          <Carousel
+            // showDots={true}
+            responsive={responsive}
+            arrows={props.isCourseClicked ? false : true}
+          >
+            {courseList.map((course, index) => (
+              <div className='user-course'>
+                <img src={courseImg} className='user-course-img'></img>
+                <p className='user-course-name'>{course.name}</p>
+                <p className='user-course-title'>{course.title}</p>
+                <button className='user-course-btn' onClick={() => { handleViewBtn(course._id) }}>More Details</button>
+              </div>
+            ))}
 
-       </div>
+          </Carousel>
+
+        </motion.div>
       </div>
     </div>
   )

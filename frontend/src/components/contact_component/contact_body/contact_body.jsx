@@ -7,6 +7,8 @@ import Phone from './images/phone.png'
 import YouTube from './images/youtube.png'
 import './contact_body.css'
 import Swal from 'sweetalert2'
+import { motion } from 'framer-motion'
+import { fadein } from '../../../Variants'
 
 export default function ContactBody() {
   
@@ -43,36 +45,41 @@ export default function ContactBody() {
  }
 
  return (
-   <div className='contact_body'>
-     <div className='get_in_touch'>
+   <div className='contact-body'>
+     <motion.div 
+       variants={fadein('right', 0.2)}
+       initial='hidden'
+       whileInView='show'
+       viewport={{ once: true, amount: 0.7 }}
+       className='get-in-touch'>
        <div className='text'>
          <h1>GET IN TOUCH</h1>
          <p>Locking for help film from and start new adventure </p>
          <hr />
        </div>
        <div className='connect'>
-         <div className='connect_option'>
+         <div className='connect-option'>
            <h2>Head Quatre</h2>
            <div className='option'>
              <img src={Home} alt='Home' />
              <p>181/1 Dala Walavva, Kuruvita</p>
            </div>
          </div>
-         <div className='connect_option'>
+         <div className='connect-option'>
            <h2>Phone</h2>
            <div className='option'>
              <img src={Phone} alt='Phone' />
              <p>+94772236066</p>
            </div>
          </div>
-         <div className='connect_option'>
+         <div className='connect-option'>
            <h2>Support</h2>
            <div className='option'>
              <img src={Email} alt='Email' />
-             <p>masterminded@gmail.com</p>
+             <p>abcdefght@gmail.com</p>
            </div>
          </div>
-         <div className='connect_option'>
+         <div className='connect-option'>
            <h2>Follow Us</h2>
            <div className='pro_link'>
              <span className='link'><img src={YouTube} alt='YouTube' /></span>
@@ -83,8 +90,14 @@ export default function ContactBody() {
          </div>
        </div>
 
-     </div>
-     <div class="form">
+     </motion.div>
+
+     <motion.div 
+       variants={fadein('left', 0.2)}
+       initial='hidden'
+       whileInView='show'
+       viewport={{ once: true, amount: 0.7 }}
+       class="form">
        <h1>Lets connect</h1>
        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo</p>
        <div class="form-row">
@@ -123,7 +136,7 @@ export default function ContactBody() {
        </div>
 
 
-     </div>
+     </motion.div>
    </div>
  )
 }

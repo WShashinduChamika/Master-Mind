@@ -21,6 +21,11 @@ div.user-course-list{
 div.user-course-list-invisible{
     display:none;
 }
+div.user-course-title-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
 div.user-course-title{
     margin-top: 4rem;
     font-size: 6.4rem;
