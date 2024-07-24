@@ -1,9 +1,7 @@
 div.edit-course{
     margin: 10rem 0rem;
     margin-left: 5rem;
-    /* height: 90vh; */
     width: 75vw;
-    /* background-color: aquamarine; */
     display: flex;
     flex-direction: column;
     animation:adminEditCoursesPopUp 0.3s ease-in-out 1;
@@ -19,9 +17,6 @@ div.edit-course{
     }
 }
 div.edit-course-invisible{
-    /* height: 90vh;
-    width: 75vw;
-    background-color: rgb(228, 150, 33); */
     display: none;
 }
 div.edit-course-path{
@@ -38,11 +33,9 @@ div.edit-selected-course{
     margin-top: 3vh;
     width: 75vw;
     gap:10rem;
-    /* background-color: rgb(15, 124, 219); */
     display: flex;
 }
 div.edit-course-detail-section{
-    /* margin-left: 3vw; */
     display: flex;
     flex-direction: column;
 }
@@ -139,21 +132,19 @@ div.edit-course-section-list{
     gap:3rem;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     max-height: 45vh;
     overflow-y: auto;
     overflow-x: hidden;
 }
 div.edit-course-section-list::-webkit-scrollbar {
-    width: 5px; /* Width of the entire scrollbar */
+    width: 5px; 
     height: 15px;
     background-color: #f5f1f1;
   }
   
-  /* Handle */
+ 
 div.edit-course-section-list::-webkit-scrollbar-thumb {
-        /* Color of the scrollbar handle */
-    border-radius: 4px; /* Roundness of the scrollbar handle */
+    border-radius: 4px;
     background-color: #359ADE;
   }
 
@@ -167,12 +158,11 @@ div.edit-course-section{
     padding: 0rem 1rem;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    /* background-color: #359ADE; */
+    justify-content: center;
 }
 input.edit-course-section-input{
     width: 20vw;
-    padding: 1.4rem 1.2rem;
+    padding: 1.4rem 1rem;
     font-size: 1.0vw;
     font-weight: 500;
     color: #16405D;

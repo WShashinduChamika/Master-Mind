@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import './AddNewCourse.css'
-import courseImg from './images/course.png'
-
+import courseImg from './images/course2.png'
+import Swal from 'sweetalert2';
 
 export default function AddNewCourse(props) {
-
+   
     const [courseSection, setCourseSection] = useState([])
     const [isCreated, setIsCreated] = useState(false)
     const [isEdited, setIsEdited] = useState(false)
-    const [isDeleted, setIsDeleted] = useState(false)
     const [createdCourseSection, setCreatedCourseSection] = useState([])
     const [inputFields, setInputFields] = useState([{ id: 0, value: '' }]);
     const [courseName, setCourseName] = useState()
@@ -25,10 +24,17 @@ export default function AddNewCourse(props) {
         const json = await response.json()
 
         if (response.ok) {
+            //alert('success')
             let courseID = json._id
             return courseID
+           
         } else {
-
+            Swal.fire({
+                title: "Error",
+                text: "There was an error updating your password. Please try again.",
+                icon: "error",
+                confirmButtonColor: "#359ADE",
+              });
         }
     }
 
@@ -42,7 +48,12 @@ export default function AddNewCourse(props) {
         if (response.ok) {
             handleRemoveField()
         } else {
-
+            Swal.fire({
+                title: "Error",
+                text: "There was an error updating your password. Please try again.",
+                icon: "error",
+                confirmButtonColor: "#359ADE",
+              });
         }
     }
 
@@ -56,11 +67,10 @@ export default function AddNewCourse(props) {
             let courseSection = json
             setCourseSection(courseSection)
         } else {
-
+            //alert("Error")
         }
     }
-    
-
+   
     const handleAddField = () => {
         setInputFields([...inputFields, { id: inputFields.length, value: '' }]);
     }
@@ -91,15 +101,24 @@ export default function AddNewCourse(props) {
         setIsCreated(!isCreated)
         setInputFields([])
         setCreatedCourseSection([])
-        setTimeout(() => {
-            goToCourses()
-        }, 1000);
+        Swal.fire({
+            title: "Course Created!",
+            text: "This course is available in course list",
+            icon: "success",
+            confirmButtonColor: "#359ADE"
+          }).then((result) => {
+            if (result.isConfirmed) {
+                props.setIsCourseAddedClicked(!props.isCourseAddedClicked)
+                props.setIsCoursesClicked(!props.isCoursesClicked)
+            }
+          });
     }
 
     const goToCourses = () => {
         props.setIsCourseAddedClicked(!props.isCourseAddedClicked)
         props.setIsCoursesClicked(!props.isCoursesClicked)
     }
+    
     useEffect(() => {
         const newCourse = document.getElementById('admin-courses-add-new-course')
         if (props.isCourseAddedClicked) {
@@ -114,14 +133,13 @@ export default function AddNewCourse(props) {
 
     return (
         <div className='admin-courses-add-new-course-invisible' id='admin-courses-add-new-course'>
-           
-           <div className='admin-navigation-title'>Add New Course</div>
-            <div className='admin-path'>Admin Panel / <span onClick={goToCourses}>Courses List</span>/ Add New Course</div>
-            <div className='add-selected-course'>
+            <div className='admin-navigation-title'>Courses</div>
+            <div className='admin-path'>Admin Panel / <span onClick={goToCourses}>Course List</span> /Add New Course</div>
+            <div className='edit-selected-course'>
 
-                <div className='add-course-detail-section'>
-                    <div className='add-course-details'>
-                        <img src={courseImg} className='add-course-img'></img>
+                <div className='edit-course-detail-section'>
+                    <div className='edit-course-details'>
+                        <img src={courseImg} className='edit-course-img'></img>
                         <input
                             className="admin-courses-add-new-course-details"
                             placeholder="Enter course name"
@@ -129,17 +147,17 @@ export default function AddNewCourse(props) {
                         >
                         </input>
                         <input
-                            className="admin-courses-add-new-course-details"
+                            className="admin-courses-add-new-course-details admin-courses-add-new-title"
                             placeholder="Enter course title"
                             onChange={(e) => setCourseTitle(e.target.value)}
                         >
                         </input>
 
                     </div>
-                    <div className='add-course-overview'>
-                        <p className='add-course-overview-title'>Course Overview</p>
+                    <div className='edit-course-overview'>
+                        <p className='edit-course-overview-title'>Course Overview</p>
                         <textarea
-                            className='add-course-overview-description'
+                            className='admin-courses-add-new-course-overview-description'
                             type='text'
                             placeholder="Enter course overview"
                             onChange={(e) => setCourseOverview(e.target.value)}
@@ -148,13 +166,13 @@ export default function AddNewCourse(props) {
                     </div>
                 </div>
 
-                <div className='add-course-sections-part'>
-                    <p className='add-course-sections-title'>This Course Includes</p>
-                    <div className='add-course-section-list'>
+                <div className='edit-course-sections-part'>
+                    <p className='edit-course-sections-title'>This Course Includes</p>
+                    <div className='edit-course-section-list'>
                         {courseSection != null ? courseSection.map((section, index) => (
-                            <div className='add-course-section'>
+                            <div className='edit-course-section'>
                                 <div
-                                    key={section._id} className='add-courses-add-new-course-section'
+                                    key={section._id} className='admin-courses-add-new-course-section'
 
                                 > {section.title}</div>
                             </div>
@@ -162,7 +180,7 @@ export default function AddNewCourse(props) {
                         {inputFields.map((field, index) => (
                             <div key={field.id} className='add-course-section'>
                                 <input
-                                    className='add-course-section-input'
+                                    className='edit-course-section-input'
                                     type="text"
                                     placeholder="Enter section"
                                     onChange={(e) => {
@@ -174,12 +192,12 @@ export default function AddNewCourse(props) {
                             </div>
                         ))}
                     </div>
-                    <div className='add-course-field-handle-btn-container'>
-                        <button onClick={handleAddField} className='add-course-field-handle-btn'>Add</button>
-                        <button onClick={handleRemoveField} className='add-course-field-handle-btn'>Remove</button>
+                    <div className='edit-course-field-handle-btn-container'>
+                        <button onClick={handleAddField} className='edit-course-field-handle-btn'>Add</button>
+                        <button onClick={handleRemoveField} className='edit-course-field-handle-btn'>Remove</button>
                     </div>
                 </div>
-                <button onClick={saveChanges} className='course-add-save-change-btn'>Save</button>
+                <button onClick={saveChanges} className='course-edit-save-change-btn'>Save</button>
             </div>
         </div>
     )

@@ -38,11 +38,13 @@ div.admin-courses-invisible{
         display: none;
     }
 }
-
+div.courses-path{
+    margin-bottom: 3rem;
+    display: flex;
+}
 div.admin-courses-section{
     /* width: 75vw; */
     /* max-height: 80vh; */
-    margin-top: 2rem;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     flex-wrap: wrap;

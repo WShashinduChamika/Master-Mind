@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import './EditCourse.css'
-import courseImg from './images/course.png'
-import { MdDelete } from "react-icons/md";
+import courseImg from './images/course2.png'
+import { MdDelete } from "react-icons/md"
+import Swal from 'sweetalert2'
 
 
 export default function EditCourse(props) {
@@ -31,10 +32,10 @@ export default function EditCourse(props) {
       setCourse(course)
       setCourseName(course.name)
       setCourseTitle(course.title)
-      setCourseOverview(course.overview)
+      //alert(course.name)
 
     } else {
-      alert('error')
+      // alert('error')
     }
   }
 
@@ -44,11 +45,6 @@ export default function EditCourse(props) {
       headers: { "Content-type": "application/json" },
       body: JSON.stringify({ name, title, overview })
     })
-    if (response.ok) {
-      alert('success')
-    } else {
-      alert('error')
-    }
   }
 
   const getCourseSections = async (id) => {
@@ -72,8 +68,8 @@ export default function EditCourse(props) {
       body: JSON.stringify({ title, courseID })
     })
     if (response.ok) {
-      alert("Created")
       setIsCreated(!isCreated)
+      //handleRemoveField()
     } else {
       alert("Error")
     }
@@ -86,7 +82,6 @@ export default function EditCourse(props) {
       body: JSON.stringify({ title })
     })
     if (response.ok) {
-      alert("success")
       setIsEdited(!isEdited)
     } else {
       alert("Error")
@@ -109,7 +104,7 @@ export default function EditCourse(props) {
     const updatedFields = [...inputFields];
     for (var i = 0; i <= inputFields.length + 1; i++) {
       updatedFields.pop();
-    }
+    } // Remove the last element
     setInputFields(updatedFields);
   }
 
@@ -128,8 +123,10 @@ export default function EditCourse(props) {
   const handleDeleteCourse = (id) => {
     deleteCourseSection(id)
   }
-
+  
+  
   const method1 = () => {
+   
     console.log(createdCourseSection)
     createdCourseSection.map((section) => {
       createCourseSection(section.value)
@@ -150,6 +147,17 @@ export default function EditCourse(props) {
     handleRemoveAllField()
     setCreatedCourseSection([])
     setEditedCourseSection([])
+    Swal.fire({
+      title: "Course Successfully Updated!",
+      text: "Successfully update all this which you need",
+      icon: "success",
+      confirmButtonColor: "#359ADE"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        props.setIsCourseEditClicked(!props.isCourseEditClicked)
+        props.setIsCoursesClicked(!props.isCoursesClicked)
+      }
+    });
   }
 
   const goToCourses = () => {
@@ -178,8 +186,8 @@ export default function EditCourse(props) {
   return (
     <div className='edit-course-invisible' id='edit-course'>
 
-      <div className='admin-navigation-title'>Edit Course</div>
-      <div className='admin-path'>Admin Panel / <span onClick={goToCourses}>Courses List</span>/ Edit Course</div>
+      <div className='admin-navigation-title'>Courses</div>
+      <div className='admin-path'>Admin Panel / <span onClick={goToCourses}>Course List</span> /Edit Course</div>
 
       <div className='edit-selected-course'>
 
@@ -194,7 +202,7 @@ export default function EditCourse(props) {
             </input>
             <input
               className="edit-course-details title"
-              placeholder={courseTitle}
+              placeholder={course.title}
               onChange={(e) => setCourseTitle(e.target.value)}
             >
             </input>
@@ -205,7 +213,8 @@ export default function EditCourse(props) {
             <textarea
               className='edit-course-overview-description'
               type='text'
-              placeholder={courseOverview}
+              // placeholder={course.overview}
+              placeholder={course.overview}
               onChange={(e) => setCourseOverview(e.target.value)}
             >
             </textarea>
@@ -218,6 +227,7 @@ export default function EditCourse(props) {
             {courseSection != null ? courseSection.map((section, index) => (
               <div className='edit-course-section'>
                 <input
+                  disabled
                   key={section._id} className='edit-course-section-input'
                   placeholder={section.title}
                   value={editedCourseSection[index]?.value || ''}
@@ -237,7 +247,7 @@ export default function EditCourse(props) {
             {inputFields.map((field, index) => (
               <div key={field.id} className='add-course-section'>
                 <input
-                  className='edit-course-section-input new-section'
+                  className='edit-course-section-input'
                   type="text"
                   placeholder="Enter section"
                   onChange={(e) => {
